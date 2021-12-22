@@ -28,7 +28,7 @@ function App() {
       */}
       <div className="auth-wrapper">
     
-        <div className="auth-inner">
+        <div className="auth-inner added">
 
      
         <SignUp />
