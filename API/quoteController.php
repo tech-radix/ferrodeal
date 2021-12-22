@@ -27,7 +27,7 @@ class quoteController extends Controller
             return $validator->errors();
         }else{
             $user = DB::select("SELECT id from users WHERE token = '".$req->token."'");
-            //echo $user[0]->id;
+            //echo $user[0]->id;show data from database
             if($user){
                 $quote= new Quote;
                 $quote->userid = $user[0]->id;
