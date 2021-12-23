@@ -55,7 +55,7 @@ class userController extends Controller
             $user = User::WHERE('phone', '=', $req->phone)->first();
             if($user){
                 if(Hash::check($req->password,$user->password)){
-                    $number = mt_rand(1000000000, 9999999999);
+                    $number = time().mt_rand(100000, 999999);
                     $user->token = $number;
                     $user->save();
                     $user = User::WHERE('phone', '=', $req->phone)->first();

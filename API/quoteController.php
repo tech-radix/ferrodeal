@@ -18,17 +18,19 @@ class quoteController extends Controller
             'manufacturer'=>'required',
             'grade'=>'required',
             'thickness'=>'required|numeric',
-            'width'=>'required|integer',
-            'length'=>'required|integer',
-            'quantity'=>'required|numeric'
+            'width'=>'required|array',
+            'length'=>'required|array',
+            'unit'=>'required|array',
+            'quantity'=>'required|array'
         );
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
             return $validator->errors();
         }else{
             $user = DB::select("SELECT id from users WHERE token = '".$req->token."'");
-            //echo $user[0]->id;show data from database
+            //echo $user[0]->id;
             if($user){
+                $unitorpcs = 'Sheet/Plate';
                 $quote= new Quote;
                 $quote->userid = $user[0]->id;
                 $quote->type = "Steel";
@@ -37,9 +39,11 @@ class quoteController extends Controller
                 $quote->manufacturer = $req->manufacturer;
                 $quote->grade = $req->grade;
                 $quote->thickness = $req->thickness;
-                $quote->width = $req->width;
-                $quote->length = $req->length;
-                $quote->quantity = $req->quantity;
+                $quote->width = implode(',',$req->width);
+                $quote->length = implode(',',$req->length);
+                $quote->unit = implode(',',$req->unit);
+                $quote->quantity = implode(',',$req->quantity);
+                if($req->has('slittedquantity')){$quote->slittedquantity = $req->slittedquantity;}
                 $quote->save();
                 $response = [
                     'result' => 'Success'
