@@ -89,7 +89,7 @@ export default class SignUp extends Component {
           if (typeof fields["mobileno"] !== "undefined") {
             if (!fields["mobileno"].match(/^[0-9]{10}$/)) {
               formIsValid = false;
-              errors["mobileno"] = "*Please enter valid mobile no.";
+              errors["mobileno"] = "*Please enter valid number.";
             }
           }
     
@@ -113,13 +113,7 @@ export default class SignUp extends Component {
             formIsValid = false;
             errors["password"] = "*Please enter your password.";
           }
-    
-          if (typeof fields["password"] !== "undefined") {
-            if (!fields["password"].match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/)) {
-              formIsValid = false;
-              errors["password"] = "*Please enter secure and strong password.";
-            }
-          }
+  
     
           this.setState({
             errors: errors
@@ -180,7 +174,7 @@ export default class SignUp extends Component {
 
                 <div className="form-group">
                     <label className="text-color">Password</label>
-                    <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange}  className="form-control" placeholder="Enter password" />
+                    <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange}  className="form-control" placeholder="Enter 4 digit pin..." />
                     <div className="errorMsg">{this.state.errors.password}</div>
                 </div>
               

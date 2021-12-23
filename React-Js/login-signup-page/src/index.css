@@ -85,7 +85,7 @@ border-radius: 25rem;
 
 .signup-at-login {
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
   padding-top: 10px;
   color: black;
   margin: 0;
@@ -142,4 +142,12 @@ background: #FF3939;
   
   margin: 0;
   text-decoration: none;
+}
+
+.img{
+  background-image: url(./ferro-deal-logo-01.png);
+  height: 100px;
+  width: 100px;
+  background-position: center;
+  background-size: cover;
 }

@@ -31,7 +31,7 @@ function App() {
         <div className="auth-inner added">
 
      
-        <SignUp />
+        <Login />
         
        
          {/* <Switch>
