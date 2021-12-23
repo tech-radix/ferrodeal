@@ -2,12 +2,8 @@ import React, { Component } from "react";
 
 export default class SignUp extends Component {
 
-
-
-
   //  import React from 'react';
    // import './style.css';
-    
     
   //  class RegisterForm extends React.Component {
         constructor() {
@@ -124,6 +120,10 @@ export default class SignUp extends Component {
         }
     
   
+
+
+
+
     render() {        
         return (
 
