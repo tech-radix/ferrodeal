@@ -39,6 +39,9 @@ export default class SignUp extends Component {
               fields["emailid"] = "";
               fields["mobileno"] = "";
               fields["password"] = "";
+              fields["companyname"] = "";
+              fields["gstnumber"] = "";
+              fields["customertype"] = "";
               this.setState({fields:fields});
               alert("Form submitted");
           }
@@ -181,10 +184,14 @@ export default class SignUp extends Component {
                     <div className="errorMsg">{this.state.errors.password}</div>
                 </div>
               
-               <div>
-                <input type="checkbox" id="myCheck" />
-                <button className="checkbox" onclick="check()">Do you want credit facilities?</button>
-               </div>
+
+                <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label className="custom-control-label" htmlFor="customCheck1">Do you want credit facilities?</label>
+                    </div>
+                </div>
+
 
                <p className="facilities-T-C">
                 <a href="#">Terms and conditions</a>
@@ -198,7 +205,7 @@ export default class SignUp extends Component {
                     By clicking the "Signup" button, I agree to the FerroDeal <br /> <a href="#">Terms and conditions</a>
                 </p>
 
-                <p className="forgot-password text-right">
+                <p className="forroDeal-T-C">
                     Already registered <br /> <a href="#">Login</a>
                 </p>
             </form>

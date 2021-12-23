@@ -4,16 +4,16 @@ export default class Login extends Component {
     render() {
         return (
             <form>
-                <h3>Sign In</h3>
+                <h3>Login</h3>
 
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <label className="text-color">Phone number</label>
+                    <input type="tel" className="form-control" placeholder="Enter registered mobile number" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <label className="text-color">Password</label>
+                    <input type="password" className="form-control" placeholder="Enter 4 digit pin" />
                 </div>
 
                 <div className="form-group">
@@ -23,9 +23,14 @@ export default class Login extends Component {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                <button type="submit" className="button">LOGIN</button>
+
+                <p className="forgot-password text-right" >
+                     <a href="#">FORGOT PASSWORD?</a>
+                </p>
+
+                <p className="signup-at-login" >
+                 <a href="#">SIGNUP</a>
                 </p>
             </form>
         );
