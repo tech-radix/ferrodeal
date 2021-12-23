@@ -39,6 +39,9 @@ export default class SignUp extends Component {
               fields["emailid"] = "";
               fields["mobileno"] = "";
               fields["password"] = "";
+              fields["companyname"] = "";
+              fields["gstnumber"] = "";
+              fields["customertype"] = "";
               this.setState({fields:fields});
               alert("Form submitted");
           }
@@ -53,8 +56,9 @@ export default class SignUp extends Component {
     
           if (!fields["username"]) {
             formIsValid = false;
-            errors["username"] = "*Please enter your username.";
+            errors["username"] = "*Please enter your full name.";
           }
+
     
           if (typeof fields["username"] !== "undefined") {
             if (!fields["username"].match(/^[a-zA-Z ]*$/)) {
@@ -89,6 +93,22 @@ export default class SignUp extends Component {
             }
           }
     
+          if (!fields["companyname"]) {
+            formIsValid = false;
+            errors["companyname"] = "*Please enter your company name.";
+          }
+
+          if (!fields["gstnumber"]) {
+            formIsValid = false;
+            errors["gstnumber"] = "*Please enter your gst number.";
+          } 
+
+          if (!fields["customertype"]) {
+            formIsValid = false;
+            errors["customertype"] = "*Please select your customer type.";
+          }
+
+
           if (!fields["password"]) {
             formIsValid = false;
             errors["password"] = "*Please enter your password.";
@@ -109,52 +129,7 @@ export default class SignUp extends Component {
     
         }
     
-    /*
-    
-      render() {
-        return (
-        <div id="main-registration-container">
-
-         <div id="register">
-
-            <h3>Registration page</h3>
-
-            <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
-
-            <label>Name</label>
-            <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
-            <div className="errorMsg">{this.state.errors.username}</div>
-
-            <label>Email ID:</label>
-            <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
-            <div className="errorMsg">{this.state.errors.emailid}</div>
-
-            <label>Mobile No:</label>
-            <input type="text" name="mobileno" value={this.state.fields.mobileno} onChange={this.handleChange}   />
-            <div className="errorMsg">{this.state.errors.mobileno}</div>
-
-            <label>Password</label>
-            <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
-            <div className="errorMsg">{this.state.errors.password}</div>
-
-            <input type="submit" className="button"  value="Register"/>
-
-            </form>
-        </div>
-    </div>
-    
-          );
-      }
-    
-    
-    }
-    
-    
-    export default RegisterForm;
-
-*/
-
-
+  
     render() {        
         return (
 
@@ -183,21 +158,24 @@ export default class SignUp extends Component {
 
                 <div className="form-group">
                     <label className="text-color">Company name</label>
-                    <input type="text" className="form-control" placeholder="Enter firm name..." />
+                    <input type="text" className="form-control" placeholder="Enter firm name..." name="companyname" value={this.state.fields.companyname} onChange={this.handleChange}/>
+                    <div className="errorMsg">{this.state.errors.companyname}</div>
                 </div>
 
                 <div className="form-group">
                     <label className="text-color">GST number</label>
-                    <input type="number" className="form-control" placeholder="Enter your gst number..." />
+                    <input type="number" className="form-control" placeholder="Enter your gst number..." name="gstnumber" value={this.state.fields.gstnumber} onChange={this.handleChange} />
+                    <div className="errorMsg">{this.state.errors.gstnumber}</div>
                 </div>
 
                 <div className="form-group">
                     <label className="text-color">Customer type</label>
-                    <select type="text" className="form-control" placeholder="Select customer type..." >
+                    <select type="text" className="form-control" placeholder="Select customer type..." name="customertype" value={this.state.fields.customertype} onChange={this.handleChange} >
                          <option>Select customer type... </option>
                          <option>Project/Manufacturer/consumers</option>
                          <option>Dealer/Trader</option>
                          </select>
+                         <div className="errorMsg">{this.state.errors.customertype}</div>
                 </div>
 
                 <div className="form-group">
@@ -206,10 +184,14 @@ export default class SignUp extends Component {
                     <div className="errorMsg">{this.state.errors.password}</div>
                 </div>
               
-               <div>
-                <input type="checkbox" id="myCheck" />
-                <button className="checkbox" onclick="check()">Do you want credit facilities?</button>
-               </div>
+
+                <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label className="custom-control-label" htmlFor="customCheck1">Do you want credit facilities?</label>
+                    </div>
+                </div>
+
 
                <p className="facilities-T-C">
                 <a href="#">Terms and conditions</a>
@@ -223,7 +205,7 @@ export default class SignUp extends Component {
                     By clicking the "Signup" button, I agree to the FerroDeal <br /> <a href="#">Terms and conditions</a>
                 </p>
 
-                <p className="forgot-password text-right">
+                <p className="forroDeal-T-C">
                     Already registered <br /> <a href="#">Login</a>
                 </p>
             </form>
