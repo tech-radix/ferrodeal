@@ -11,7 +11,7 @@ export default class Login extends Component {
         }
   
         this.handleChange = this.handleChange.bind(this);
-        this.submituserRegistrationForm = this.submituserRegistrationForm.bind(this);
+        this.submituserLoginForm = this.submituserLoginForm.bind(this);
   
       };
   
@@ -24,7 +24,7 @@ export default class Login extends Component {
   
       }
   
-      submituserRegistrationForm(e) {
+      submituserLoginForm(e) {
         e.preventDefault();
         if (this.validateForm()) {
             let fields = {};
@@ -72,7 +72,7 @@ export default class Login extends Component {
 
             <h3>Login</h3>
 
-            <form>
+            <form method="post"  name="userLoginForm"  onSubmit= {this.submituserLoginForm}>
                 <div className="form-group">
                     <label className="text-color">Phone number</label>
                     <input type="tel" className="form-control" placeholder="Enter registered mobile number" value={this.state.fields.mobileno} onChange={this.handleChange}  />
