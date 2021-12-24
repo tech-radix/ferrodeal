@@ -2,11 +2,11 @@ import http from "../http-common";
 
 class LoginDataService {
   // getAll() {
-  //   return http.get("/tutorials");
+  //   return http.get("/material");
   // }
 
   // get(id) {
-  //   return http.get(`/tutorials/${id}`);
+  //   return http.get(`/material/${id}`);
   // }
 
   login(data) {
