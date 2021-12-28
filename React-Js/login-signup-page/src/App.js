@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-//import SignIn from "./components/sign-in.component";
+import SignIn from "./components/sign-in.component";
 import SignUp from "./components/sign-up.component";
 
 
@@ -17,20 +17,15 @@ class App extends Component {
 
         
 
-        <SignUp />
+        <SignIn />
 
         {/*  <Switch>
-           
-           {//<Route exact path="/" component={SignIn} />
-            //<Route path="/sign-in" component={SignIn} />
-          
-          } 
-          // <Route path="/" component={SignUp} />
-         
-            
-           
+           <Route exact path="/" component={SignIn} />
+           <Route path="/sign-in" component={SignIn} />
+           <Route path="/" component={SignUp} />
           </Switch>
            */}
+
         </div>
       </div>
     );
