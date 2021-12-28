@@ -1,34 +1,40 @@
-import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { BrowserRouter as Router,Switch, Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-import Login from "./components/login.component";
-import SignUp from "./components/signup.component";
+//import SignIn from "./components/sign-in.component";
+import SignUp from "./components/sign-up.component";
 
-function App() {
-  return (<Router>
-    <div className="App">
-    
-      <div className="auth-wrapper">
-    
-        <div className="auth-inner added">
 
-     
-        <Login />
+class App extends Component {
+  render() {
+    return (
+      <div>
+      
+
+        <div className="container mt-3">
+
         
-       {/*
-          <Switch>
-            <Route exact path='/' component={Login} />
-            <Route path="/sign-in" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
-          </Switch>
-         */ }
+
+        <SignUp />
+
+        {/*  <Switch>
+           
+           {//<Route exact path="/" component={SignIn} />
+            //<Route path="/sign-in" component={SignIn} />
+          
+          } 
+          // <Route path="/" component={SignUp} />
          
+            
+           
+          </Switch>
+           */}
         </div>
       </div>
-    </div></Router>
-  );
+    );
+  }
 }
 
 export default App;
