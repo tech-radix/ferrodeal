@@ -15,13 +15,16 @@ class App extends Component {
 
         <div className="container mt-3">
 
-        
+        <SignIn />
 
-        <Switch>
-<Route exact path="/" component={SignIn} />
+      {/*  <Switch>
+        <Route exact path="/" component={SignIn} />
+        <Route path="/" component={SignUp} />
+
 <Route path="/sign-in" component={SignIn} />
-<Route path="/" component={SignUp} />
+
 </Switch>
+*/}
 
         </div>
       </div>
