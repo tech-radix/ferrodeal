@@ -17,14 +17,11 @@ class App extends Component {
 
         
 
-        <SignUp />
-
-        {/*  <Switch>
-           <Route exact path="/" component={SignIn} />
-           <Route path="/sign-in" component={SignIn} />
-           <Route path="/" component={SignUp} />
-          </Switch>
-           */}
+        <Switch>
+<Route exact path="/" component={SignIn} />
+<Route path="/sign-in" component={SignIn} />
+<Route path="/" component={SignUp} />
+</Switch>
 
         </div>
       </div>

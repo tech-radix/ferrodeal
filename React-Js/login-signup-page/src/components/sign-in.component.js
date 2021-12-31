@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginDataService from "../services/login.service";
 import "../index-signin.css";
+import { Link } from 'react-router-dom';
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -101,10 +102,8 @@ export default class SignIn extends Component {
               />
             </div>
 
-            <button onClick={this.Login} className="button">
-              LOGIN
-            </button>
-
+            <button onClick={this.Login} className="button"> <Link to="./src/components.sign-up.component.js">LOGIN</Link>
+</button>
 
 <div className="forgot-password" >
 <a href="#">FORGOT PASSWORD?</a>
