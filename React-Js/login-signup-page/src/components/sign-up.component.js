@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SignupDataService from "../services/signup.service";
 import "../index-signup.css";
+import { Link } from 'react-router-dom';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -250,8 +251,8 @@ export default class SignUp extends Component {
                 <a href="#">Terms and conditions</a>
                 </p>
 
-            <button onClick={this.Signup} className="button">
-              SIGNUP
+            <button onClick={this.Signup} className="button"> SIGNUP
+              
             </button>
 
 
@@ -260,7 +261,7 @@ export default class SignUp extends Component {
                 </p>
 
                 <p className="forroDeal-T-C">
-                    Already registered <br /> <a href="#">Login</a>
+                    Already registered <br /> <Link to="./src/components/sign-in.component.js">Login</Link>
                 </p>
             
           </div>

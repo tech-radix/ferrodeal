@@ -9,6 +9,8 @@ body {
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
+
+  
 }
 
 h1,h2,h3,h4,h5,h6,label,span {
@@ -124,6 +126,7 @@ border-radius: 25rem;
 }
 
 .button {
+  margin-top: 15px;
   border-radius: 25px;
   width: 100%;
   height: 40px;
@@ -155,6 +158,8 @@ background: #FF3939;
 }
 
 .img-logo{
+  margin-top: 100px;
+  margin-bottom: 20px;
   background-image: url(./ferro\ deal-01.png);
   height: 150px;
   width: 250px;
