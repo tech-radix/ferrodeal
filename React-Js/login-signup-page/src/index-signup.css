@@ -23,8 +23,25 @@ body, html, .App, #root, .auth-wrapper {
   height: auto;
 }
 
+.signup-heading{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .text-color {
   color: rgba(255,57,57,0.7231267507002801);
+  font-size: 16px;
+}
+
+.placeholder {
+  font-size: 32px;
+}
+
+.background {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .auth-wrapper {
@@ -79,10 +96,7 @@ border-radius: 25rem;
   padding-top: 50px;
 
 }
-.signup-heading{
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 
 .forgot-password {
   text-align: center;
@@ -111,7 +125,7 @@ border-radius: 25rem;
 
 .forroDeal-T-C {
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   padding-top: 10px;
   color: black;
   margin: 0;
@@ -137,6 +151,7 @@ background: #FF3939;
   border: 0px;
   cursor: pointer;
   transition: opacity 0.25s ease-out;
+  margin-bottom: 20px;
 }
 
 .checkbox {
@@ -151,9 +166,7 @@ background: #FF3939;
 .facilities-T-C a {
   color: white;
   text-align: left;
-  font-size: 10px;
-  
-  margin: 0;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -166,5 +179,4 @@ background: #FF3939;
   background-size: cover;
   border: none;
   border-color: transparent;
-
 }  

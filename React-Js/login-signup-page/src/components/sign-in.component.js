@@ -65,7 +65,7 @@ export default class SignIn extends Component {
         ) : (
        
           
-          <div>
+          <div className="auth-inner">
 
           <center>
           <img className="img-logo"> 

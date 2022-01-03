@@ -114,7 +114,7 @@ export default class SignUp extends Component {
     return (
 
       <>
-
+<div className="background"></div>
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
@@ -123,7 +123,7 @@ export default class SignUp extends Component {
 
         ) : (    
 
-          <div>
+          <div className="auth-inner">
 
 
          <h3 className="signup-heading">Sign Up</h3>
