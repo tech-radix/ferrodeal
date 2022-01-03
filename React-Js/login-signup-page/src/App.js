@@ -15,7 +15,7 @@ class App extends Component {
 
         <div className="container mt-3">
 
-        <SignUp />
+        <SignIn />
 
       {/*  <Switch>
         <Route exact path="/" component={SignIn} />
