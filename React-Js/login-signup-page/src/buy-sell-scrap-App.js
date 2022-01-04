@@ -2,7 +2,7 @@ import * as React from 'react';
 import "./buy-sell-scrap.css"
 
 
-function SwipeableTextMobileStepper() {
+function BuySellScrap() {
 
   return (
     <>
@@ -21,21 +21,21 @@ function SwipeableTextMobileStepper() {
           </nav>
       </div>
 
-      <div className='product'>
-        <div className="heading">Buy/Sell scrap</div>
-        <center><hr></hr><div className='box'></div><hr></hr></center>
+      <div className='buy-sell-scrap-product'>
+        <div className="buy-sell-scrap-heading">Buy/Sell scrap</div>
+        <center className='buy-sell-scrap-center' ><hr className='buy-sell-scrap-hr' ></hr><div className='box'></div><hr className='buy-sell-scrap-hr' ></hr></center>
         </div>
 
 
-        <div className='product-2'>
-        <div className="heading-2">Do you want to Sell scrap or Buy scrap?</div>
+        <div className='buy-sell-scrap-product-2'>
+        <div className="buy-sell-scrap-heading-2">Do you want to Sell scrap or Buy scrap?</div>
         </div>
         
-        <center><button className="button-1"><i className="fas fa-dollar-sign"></i> SELL SCRAP </button></center>
+        <center><button className="buy-sell-scrap-button-1"><i className="fas fa-dollar-sign"></i> SELL SCRAP </button></center>
 
-        <center><button className="button-2"><i className="fas fa-shopping-cart"></i> BUY SCRAP </button></center>
+        <center><button className="buy-sell-scrap-button-2"><i className="fas fa-shopping-cart"></i> BUY SCRAP </button></center>
 
-        <center><button className="button-3"><i class="fas fa-sync-alt"></i> SCRAPS IN STOCK </button></center>
+        <center><button className="buy-sell-scrap-button-3"><i class="fas fa-sync-alt"></i> SCRAPS IN STOCK </button></center>
       
 
       <footer>
@@ -49,4 +49,4 @@ function SwipeableTextMobileStepper() {
     </>
   );
 }
-export default SwipeableTextMobileStepper;
+export default BuySellScrap;
