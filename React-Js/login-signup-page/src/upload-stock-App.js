@@ -49,18 +49,11 @@ class App extends Component {
 		return (
 		<div>
 			<h2>File Details:</h2>
-			
-<p>File Name: {this.state.selectedFile.name}</p>
-
-			
-<p>File Type: {this.state.selectedFile.type}</p>
-
-			
-<p>
-			Last Modified:{" "}
+			<p>File Name: {this.state.selectedFile.name}</p>
+			<p>File Type: {this.state.selectedFile.type}</p>			
+            <p>Last Modified:{" "}
 			{this.state.selectedFile.lastModifiedDate.toDateString()}
 			</p>
-
 		</div>
 		);
 	} else {
@@ -92,26 +85,26 @@ class App extends Component {
           </nav>
       </div>
 
-      <div className='product'>
-        <div className="heading">Buy/Sell scrap</div>
-        <center><hr></hr><div className='box'></div><hr></hr></center>
+      <div className='upload-stock-product'>
+        <div className="upload-stock-heading">Buy/Sell scrap</div>
+        <center className='upload-stock-center' ><hr className="upload-stock-hr" ></hr><div className='box'></div><hr className="upload-stock-hr" ></hr></center>
         </div>
 
 
-        <div className='product-2'>
-        <div className="heading-2">You can upload your stock here</div>
+        <div className='upload-stock-product-2'>
+        <div className="upload-stock-heading-2">You can upload your stock here</div>
         </div>
         
-		<div className="file-upload">
+		<div className="upload-stock-file-upload">
 			<div >
 			
-			<div className="border" >	<input className="file-button" type="file" onChange={this.onFileChange} /> </div>
+			<div className="upload-stock-border" >	<input className="upload-stock-file-button" type="file" onChange={this.onFileChange} /> </div>
 
 
-				<button className="Button-x" onClick={this.onFileUpload}><i class="fas fa-cloud-upload-alt"></i>
+				<button className="upload-stock-Button-x" onClick={this.onFileUpload}><i class="fas fa-cloud-upload-alt"></i>
 				UPLOAD
 				</button>
-				<button className="button-3" onClick={this.onFileUpload}><i class="fas fa-ban"></i>
+				<button className="upload-stock-button-3" onClick={this.onFileUpload}><i class="fas fa-ban"></i>
 				CANCEL
 				</button>
 			</div>
