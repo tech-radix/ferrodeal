@@ -2,7 +2,7 @@ import * as React from 'react';
 import "./be-a-partner.css"
 
 
-function SwipeableTextMobileStepper() {
+function BeApartner() {
 
   return (
     <>
@@ -21,39 +21,39 @@ function SwipeableTextMobileStepper() {
           </nav>
       </div>
 
-      <div className='product'>
-        <div className="heading">Be a partner</div>
-        <center><hr></hr><div className='box'></div><hr></hr></center>
+      <div className='be-a-partner-product'>
+        <div className="be-a-partner-heading">Be a partner</div>
+        <center  className='be-a-partner-center' ><hr className='be-a-partner-hr'></hr><div className='be-a-partner-box'></div><hr className='be-a-partner-hr'></hr></center>
         </div>
 
 
-        <div className='product-2'>
-        <div className="heading-2"><b>Contact number: +91 9685642619</b></div>
+        <div className='be-a-partner-product-2'>
+        <div className="be-a-partner-heading-2"><b>Contact number: +91 9685642619</b></div>
         </div>
 
-        <div className='product-5'>
-        <div className="heading-5"><h5>We, FerroDeal is a pioneer and leading e-commerce business to business online steel trading platform in MP.<br /><br />
+        <div className='be-a-partner-product-5'>
+        <div className="be-a-partner-heading-5"><h5>We, FerroDeal is a pioneer and leading e-commerce business to business online steel trading platform in MP.<br /><br />
  We are happy to joining you with more than 1000 Steel consumers and retailers accross Madhya Pradesh and it’s all manufacturing and trading hubs like Pithampur, Sawver road, Dewas, Govindpura etc.<br /><br />
 We are looking for our association with you to cater to all customers in this on line platform by tendering your materials and services like products and transportation accross India.
 <br /><br />Please contact with us for further information and details.</h5></div>
         </div>
 
 
-        <div className='product-3'>
+        <div className='be-a-partner-product-3'>
         <center><b><p>Tell us about yourself (Optional)</p></b> </center>
-        <div className="heading-3"><textarea rows="2" cols="50" placeholder="Short description about you..."></textarea></div>
+        <div className="be-a-partner-heading-3"><textarea className='be-a-partner-textarea' rows="2" cols="50" placeholder="Short description about you..."></textarea></div>
         </div>
 
-        <div className='product-3'>
-        <div className="heading-3"> <b> Interested? </b> </div>
+        <div className='be-a-partner-product-3'>
+        <div className="be-a-partner-heading-3"> <b> Interested? </b> </div>
         </div>
 
-        <div className='product-4'>
-        <div className="heading-4">Become a partner and avail exclusive benifits</div>
+        <div className='be-a-partner-product-4'>
+        <div className="be-a-partner-heading-4">Become a partner and avail exclusive benifits</div>
         </div>
 
 
-        <center><button className="button-3">YES TAKE ME IN</button></center>
+        <center><button className="be-a-partner-button">YES TAKE ME IN</button></center>
       
 
       <footer>
@@ -67,4 +67,4 @@ We are looking for our association with you to cater to all customers in this on
     </>
   );
 }
-export default SwipeableTextMobileStepper;
+export default BeApartner;
