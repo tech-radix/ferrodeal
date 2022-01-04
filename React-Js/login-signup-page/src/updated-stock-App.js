@@ -2,7 +2,7 @@ import * as React from 'react';
 import "./updated-stock.css"
 
 
-function SwipeableTextMobileStepper() {
+function UpdatedStock() {
 
   return (
     <>
@@ -22,13 +22,13 @@ function SwipeableTextMobileStepper() {
           </nav>
       </div>
 
-      <div className='product'>
-        <div className="heading">Clearance Sale</div>
-        <center><hr></hr><div className='box'></div><hr></hr></center> 
+      <div className='updated-stock-product'>
+        <div className="updated-stock-heading">Clearance Sale</div>
+        <center className='updated-stock-center' ><hr className='updated-stock-hr' ></hr><div className='updated-stock-box'></div><hr className='updated-stock-hr' ></hr></center> 
         </div>
 
-        <div className='block'>
-          <span><div className='box_1'></div><h3></h3></span>
+        <div className='updated-stock-block'>
+          <span className='updated-stock-span' ><div className='updated-stock-box_1'></div><h3 className='updated-stock-h3' ></h3></span>
         </div>
        
 
@@ -43,4 +43,4 @@ function SwipeableTextMobileStepper() {
     </>
   );
 }
-export default SwipeableTextMobileStepper;
+export default UpdatedStock;
