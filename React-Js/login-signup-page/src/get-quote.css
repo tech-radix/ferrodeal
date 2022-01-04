@@ -16,12 +16,6 @@ body {
     margin-left: 180px;
   }
 
-  .ham{
-    width: 400px;
-  height: 300px;
-  background:black;
-  }
-
   .logo {
     background-image: url(./images/sdfd.png);
     background-size: cover;
@@ -86,7 +80,7 @@ body {
     text-shadow: 0px 4px 3px rgb(9 8 8 / 56%)
   }
  
-  .heading {
+  .get-quote-heading {
     text-align: center;
     font-size: 40px;
     text-transform: uppercase;
@@ -94,7 +88,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
-  .box {
+  .get-quote-box {
     width: 9px;
     height: 9px;
     margin-top: 17px;
@@ -102,7 +96,7 @@ body {
   }
 
   
-  hr {
+  .get-quote-hr {
     width: 78px;
     margin-top: 20px;
     margin-left: 15px;
@@ -110,13 +104,13 @@ body {
     border: 2px solid #101010;
   }
   
-  center {
+  .get-quote-center {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   
-  .block {
+  .get-quote-block {
     width: 100%;
     height: 300px;
     display: flex;
@@ -125,7 +119,7 @@ body {
     margin-top: 70px;
   }
   
-  .block_2 {
+  .get-quote-block_2 {
     width: 100%;
     height: 300px;
     margin-top: 120px;
@@ -134,7 +128,7 @@ body {
     justify-content: space-evenly;
   }
 
-  .block_3 {
+  .get-quote-block_3 {
     width: 100%;
     height: 300px;
     margin-top: 120px;
@@ -143,7 +137,7 @@ body {
     justify-content: space-evenly;
   }
   
-  span {
+  .get-quote-span{
     width: auto;
     height: 378 px;
     border: 1 px solid;
@@ -151,12 +145,12 @@ body {
     margin-left: 0 px;
   }
 
-  h3{
+  .get-quote-h3{
     color: #757575;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
-  .box_1 {
+  .get-quote-box_1 {
     width: 250px;
     height: 250px;
     background-image: url('./images/HR.jpg');
@@ -168,7 +162,7 @@ body {
     border-radius: 30px;
   }
   
-  .box_2 {
+  .get-quote-box_2 {
     width: 250px;
     height: 250px;
     background-image: url('./images/HRPO.jpeg');
@@ -180,7 +174,7 @@ body {
     border-radius: 30px;
   }
   
-  .box_3 {
+  .get-quote-box_3 {
     width: 250px;
     height: 250px;
     background-image: url('./images/ColdRolled.jpeg');
@@ -193,7 +187,7 @@ body {
   
   }
   
-  .box_4 {
+  .get-quote-box_4 {
     width: 250px;
     height: 250px;
     background-image: url('./images/Gal.jpeg');
@@ -206,7 +200,7 @@ body {
   
   }
 
-  .box_5 {
+  .get-quote-box_5 {
     width: 250px;
     height: 250px;
     background-image: url('./images/Color\ coted\ products.jpeg');
@@ -219,7 +213,7 @@ body {
   
   }
 
-  .box_6 {
+  .get-quote-box_6 {
     width: 250px;
     height: 250px;
     background-image: url('./images/TMT\ bars.jpeg');
@@ -231,7 +225,7 @@ body {
   
   }
 
-  .box_7 {
+  .get-quote-box_7 {
     width: 250px;
     height: 250px;
     background-image: url('./images/Ms\ structure.jpeg');
@@ -243,7 +237,7 @@ body {
   
   }
 
-  .button-1 {
+  .get-quote-button-1 {
     border-radius: 25px;
     width: 40%;
     height: 50px;

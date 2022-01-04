@@ -2,7 +2,7 @@ import * as React from 'react';
 import "./get-quote.css"
 
 
-function SwipeableTextMobileStepper() {
+function GetQuote() {
 
   return (
     <>
@@ -22,24 +22,24 @@ function SwipeableTextMobileStepper() {
           </nav>
       </div>
 
-      <div className='product'>
-        <div className="heading">Material Type</div>
-        <center><hr></hr><div className='box'></div><hr></hr></center>
+      <div className='get-quote-product'>
+        <div className="get-quote-heading">Material Type</div>
+        <center className='get-quote-center' ><hr className='get-quote-hr' ></hr><div className='get-quote-box'></div><hr className='get-quote-hr' ></hr></center>
 
-        <center><button className="button-1"> Please select material type </button></center>
+        <center><button className="get-quote-button-1"> Please select material type </button></center>
 
-        <div className='block'>
-          <span><div className='box_1'></div><h3>Hot rolled - HR </h3></span>
-          <span><div className='box_2'></div><h3> HRPO </h3></span>
-          <span><div className='box_3'></div><h3>Cold rolled - CR</h3></span>
+        <div className='get-quote-block'>
+          <span className='get-quote-span' ><div className='get-quote-box_1'></div><h3 className='get-quote-h3' >Hot rolled - HR </h3></span>
+          <span className='get-quote-span' ><div className='get-quote-box_2'></div><h3 className='get-quote-h3' > HRPO </h3></span>
+          <span className='get-quote-span' ><div className='get-quote-box_3'></div><h3 className='get-quote-h3' >Cold rolled - CR</h3></span>
         </div>
-        <div className='block_2'>
-          <span><div className='box_4'></div><h3> Galvanized - GAL </h3></span>
-          <span><div className='box_5'></div><h3> Color Coated</h3></span>
-          <span><div className='box_6'></div><h3> TMT BARS </h3></span>
+        <div className='get-quote-block_2'>
+          <span className='get-quote-span' ><div className='get-quote-box_4'></div><h3 className='get-quote-h3' > Galvanized - GAL </h3></span>
+          <span className='get-quote-span' ><div className='get-quote-box_5'></div><h3 className='get-quote-h3' > Color Coated</h3></span>
+          <span className='get-quote-span' ><div className='get-quote-box_6'></div><h3 className='get-quote-h3' > TMT BARS </h3></span>
         </div>
-        <div className='block_3'>
-          <span><div className='box_7'></div><h3> MS STRUCTURES </h3></span>
+        <div className='get-quote-block_3'>
+          <span className='get-quote-span' ><div className='get-quote-box_7'></div><h3 className='get-quote-h3' > MS STRUCTURES </h3></span>
         </div>
       </div>
 
@@ -54,4 +54,4 @@ function SwipeableTextMobileStepper() {
     </>
   );
 }
-export default SwipeableTextMobileStepper;
+export default GetQuote;
