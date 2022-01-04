@@ -1,3 +1,4 @@
+import { NavLink, Redirect } from "react-router-dom";
 import http from "../http-commonsignup";
 
 class SignupDataService {
@@ -15,6 +16,11 @@ class SignupDataService {
 
   signup(data) {
     return http.post("/signup", data);
+    var result=data.result;
+  if(result==='Success'){
+    console.log(result);
+  console.log('login');
+  }
   }
 
 
