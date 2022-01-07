@@ -1,49 +1,33 @@
-import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-import Login from "./components/login.component";
-import SignUp from "./components/signup.component";
+import SignIn from "./components/sign-in.component";
+import SignUp from "./components/sign-up.component";
 
-function App() {
-  return (<Router>
-    <div className="App">
-    {/*
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to={"/sign-in"}>positronX.io</Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/sign-in"}>Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      */}
-      <div className="auth-wrapper">
-    
-        <div className="auth-inner added">
 
-     
+class App extends Component {
+  render() {
+    return (
+      <div>
+      
+
+        <div className="container mt-3">
+
         <SignUp />
-        
-       
-         {/* <Switch>
-            <Route exact path='/' component={Login} />
-            <Route path="/sign-in" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
-          </Switch>
-          */}
+
+      {/*  <Switch>
+        <Route exact path="/" component={SignIn} />
+        <Route path="/" component={SignUp} />
+        <Route path="/sign-in" component={SignIn} />
+       </Switch>
+*/}
+
         </div>
       </div>
-    </div></Router>
-  );
+    );
+  }
 }
 
 export default App;
