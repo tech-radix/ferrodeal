@@ -9,6 +9,7 @@ export default class SignUp extends Component {
     this.onChangefname = this.onChangefname.bind(this);
     this.onChangepassword_confirmation = this.onChangepassword_confirmation.bind(this);
     this.onChangephone = this.onChangephone.bind(this);
+    this.onChangeemail = this.onChangeemail.bind(this);
     this.onChangepassword = this.onChangepassword.bind(this);
     this.onChangecompanyname = this.onChangecompanyname.bind(this);
     this.onChangegstnumber = this.onChangegstnumber.bind(this);
@@ -21,6 +22,7 @@ export default class SignUp extends Component {
       fname: '',
         password_confirmation: '',
         phone: '',
+        email: '',
         password: '',
         companyname: '',
         gstnumber: '',
@@ -46,6 +48,13 @@ export default class SignUp extends Component {
         phone: e.target.value
     });
   }
+
+  onChangeemail(e) {
+    this.setState({
+        email: e.target.value
+    });
+  }
+
 
   onChangepassword(e) {
     this.setState({
@@ -82,6 +91,7 @@ export default class SignUp extends Component {
       fname: this.state.fname,
       password_confirmation: this.state.password_confirmation,
       phone: this.state.phone,
+      email: this.state.email,
         password: this.state.password,
         companyname: this.state.companyname,
         gstnumber: this.state.gstnumber,
@@ -95,6 +105,7 @@ export default class SignUp extends Component {
           fname: response.data.fname,
           password_confirmation: response.data.password_confirmation,
           phone: response.data.phone,
+          email: response.data.email,
             password: response.data.password,
             companyname: response.data.companyname,
             gstnumber: response.data.gstnumber,
@@ -114,7 +125,7 @@ export default class SignUp extends Component {
     return (
 
       <>
-<div className="background"></div>
+<div className="background">
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
@@ -140,6 +151,19 @@ export default class SignUp extends Component {
                 value={this.state.phone}
                 onChange={this.onChangephone}
                 name="phone"
+              />
+            </div>
+
+            <div className="form-group">
+              <label  className="text-color" htmlFor="email">Email</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter your email..."
+                id="email"
+                value={this.state.email}
+                onChange={this.onChangeemail}
+                name="email"
               />
             </div>
           
@@ -190,7 +214,6 @@ export default class SignUp extends Component {
               htmlFor="type">Customer type</label>
 
               <select 
-              type="text" 
               className="form-control" 
               placeholder="Select customer type..." 
               id="type"
@@ -267,6 +290,7 @@ export default class SignUp extends Component {
           </div>
           
         )}
+      </div>
       </div>
       </>
     );

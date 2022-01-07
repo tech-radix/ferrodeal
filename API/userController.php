@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Validator;
+use Session;
 
 class userController extends Controller
 {
@@ -13,9 +15,8 @@ class userController extends Controller
     function signup(Request $req){
         $rules = array(
             'fname'=>'required',
-            'password' => 'required|confirmed|min:4|max:4',
+            'password' => 'required|confirmed|digits_between:4,4',
             'password_confirmation' => 'required',
-            'email'=>'required|email|unique:users',
             'phone'=>'required|integer|unique:users',
             'companyname'=>'required',
             'gstnumber'=>'required|max:40',
@@ -34,6 +35,9 @@ class userController extends Controller
             if($req->has('iscreditrequest')){
                 $user->iscreditrequest = $req->iscreditrequest;
             }
+            if($req->has('email')){
+                $user->email = $req->email;
+            }
             $user->gstnumber = $req->gstnumber;
             $user->type = $req->type;
             $user->save();
@@ -46,19 +50,21 @@ class userController extends Controller
     function signin(Request $req){
         $rules = array(
             'phone'=>'required|integer',
-            'password' => 'required|min:4|max:4'
+            'password' => 'required|digits_between:4,4'
         );
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
             return $validator->errors();
         }else{
             $user = User::WHERE('phone', '=', $req->phone)->first();
-            if($user){
+            if(!is_null($user)){
                 if(Hash::check($req->password,$user->password)){
-                    $number = mt_rand(1000000000, 9999999999);
-                    $user->token = $number;
-                    $user->save();
-                    $user = User::WHERE('phone', '=', $req->phone)->first();
+                    if( ($user->token == null) || (trim($user->token) == "") ){
+                        $number = time().mt_rand(100000, 999999);
+                        $user->token = $number;
+                        $user->save();
+                        $user = User::WHERE('phone', '=', $req->phone)->first();
+                    }
                     return $user;
                 }else{
                     $response = [
@@ -82,13 +88,24 @@ class userController extends Controller
         if($validator->fails()){
             return $validator->errors();
         }else{
-            
-            return response($response);
+            $user = User::WHERE('phone', '=', $req->phone)->first();
+            if(!is_null($user)){
+                $response = [
+                    'result' => 'User found'
+                ];
+                return $response;
+            }else{
+                $response = [
+                    'result' => 'User not found'
+                ];
+                return $response;
+            }
         }
     }
     function sendotp(Request $req){
         $rules = array(
-            'phone'=>'required|integer'
+            'phone'=>'required|integer',
+            'type'=>'required'
         );
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
@@ -100,16 +117,77 @@ class userController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_URL, $url);
             $result = curl_exec($ch);
-            $user = User::WHERE('phone', '=', $req->phone)->first();
-            $user->otp = $otp;
-            $user->save();
+            if($req->type == 'signup'){
+                DB::table('otpcheck')
+                ->where('phone', '=', $req->phone)
+                ->delete();
+                DB::table('otpcheck')->insert(
+                    ['phone' => $req->phone, 'otp' => $otp]
+                );
+            }else{
+                $user = User::WHERE('phone', '=', $req->phone)->first();
+                $user->otp = $otp;
+                $user->save();
+            }
             return $result;
         }
     }
     function chkotp(Request $req){
         $rules = array(
             'phone'=>'required|integer',
-            'otp'=>'required|min:6|max:6'
+            'otp'=>'required|digits_between:6,6',
+            'type'=>'required'
+        );
+        $validator = Validator::make($req->all(),$rules);
+        if($validator->fails()){
+            return $validator->errors();
+        }else{
+            if($req->type == 'signup'){
+                $otpcheck = DB::table('otpcheck')
+                ->where('phone', '=', $req->phone)
+                ->where('otp', '=', $req->otp)
+                ->get();
+                if(count($otpcheck) > 0 ){
+                    DB::table('otpcheck')
+                    ->where('phone', '=', $req->phone)
+                    ->delete();
+                    $response = [
+                        'result' => 'Success'
+                    ];
+                    return $response;
+                }else{
+                    $response = [
+                        'result' => 'Invalid otp'
+                    ];
+                    return $response;
+                }
+            }else{
+                $user = User::where([
+                    ['phone', '=', $req->phone],
+                    ['otp', '=', $req->otp]
+                ])->first();
+                if(!is_null($user)){
+                    /*$user->otp = null;
+                    $user->save();*/
+                    $response = [
+                        'result' => 'Success'
+                    ];
+                    return $response;
+                }else{
+                    $response = [
+                        'result' => 'Invalid otp number'
+                    ];
+                    return $response;
+                }
+            }
+        }
+    }
+    function cpassword(Request $req){
+        $rules = array(
+            'password' => 'required|digits_between:4,4',
+            'password_confirmation' => 'required',
+            'phone'=>'required|integer',
+            'otp'=>'required|digits_between:6,6'
         );
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
@@ -119,37 +197,8 @@ class userController extends Controller
                 ['phone', '=', $req->phone],
                 ['otp', '=', $req->otp]
             ])->first();
-            if($user){
-                /*$user->otp = null;
-                $user->save();*/
-                $response = [
-                    'result' => 'Success'
-                ];
-                return $response;
-            }else{
-                $response = [
-                    'result' => 'Invalid otp number'
-                ];
-                return $response;
-            }
-        }
-    }
-    function cpassword(Request $req){
-        $rules = array(
-            'password' => 'required|confirmed|min:4|max:4',
-            'password_confirmation' => 'required',
-            'phone'=>'required|integer',
-            'otp'=>'required|min:6|max:6'
-        );
-        if($validator->fails()){
-            return $validator->errors();
-        }else{
-            $user = User::where([
-                ['phone', '=', $req->phone],
-                ['otp', '=', $req->otp]
-            ])->first();
-            if($user){
-                $user->password = $req->password;
+            if(!is_null($user)){
+                $user->password = Hash::make($req->password);
                 $user->otp = null;
                 $user->save();
                 $response = [
@@ -165,16 +214,14 @@ class userController extends Controller
         }
     }
     function update(Request $req){
+        $rules = array(
+            'token'=>'required',
+        );
         if($req->has('profileimage')){
-            $rules = array(
-                'token'=>'required',
-                //'profileimage' => 'required|mimes:doc,docx,pdf,txt,csv|max:2048',
-                'profileimage' => 'required|mimes:png,jpg,jpeg,gif|max:2305',
-            );
-        }else{
-            $rules = array(
-                'token'=>'required',
-            );
+            $rules['profileimage'] = 'required|mimes:png,jpg,jpeg,gif|max:2305';
+        }
+        if($req->has('tdsfile')){
+            $rules['tdsfile'] = 'required|mimes:pdf|max:2305';
         }
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
@@ -183,11 +230,16 @@ class userController extends Controller
             $user = User::where([
                 ['token', '=', $req->token]
             ])->first();
-            if($user){
+            if(!is_null($user)){
                 if($req->has('profileimage')){
                     $imageName = time().'.'.$req->profileimage->extension(); 
                     $path = $req->file('profileimage')->move('public/userimages', $imageName);
                     $user->profileimage = $imageName;
+                }
+                if($req->has('tdsfile')){
+                    $pdfName = time().'.'.$req->tdsfile->extension(); 
+                    $path = $req->file('tdsfile')->move('public/userimages', $pdfName);
+                    $user->tdsfile = $pdfName;
                 }
                 if($req->has('fname')){$user->fname = $req->fname;}
                 if($req->has('tannumbr')){$user->tannumbr = $req->tannumbr;}
@@ -208,13 +260,14 @@ class userController extends Controller
         $rules = array(
             'token'=>'required'
         );
+        $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
             return $validator->errors();
         }else{
             $user = User::where([
                 ['token', '=', $req->token]
             ])->first();
-            if($user){
+            if(!is_null($user)){
                 $user->token = null;
                 $user->save();
                 $response = [
@@ -240,7 +293,7 @@ class userController extends Controller
             $user = User::where([
                 ['token', '=', $req->token]
             ])->first();
-            if($user){
+            if(!is_null($user)){
                 return $user;
             }else{
                 $response = [

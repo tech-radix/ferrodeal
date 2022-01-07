@@ -13,17 +13,16 @@ class getcatController extends Controller
     function getmg(Request $req){
         $rules = array(
             'token'=>'required',
-            'category'=>'required',
-            'subcategory'=>'required'
+            'category'=>'required'
         );
         $validator = Validator::make($req->all(),$rules);
         if($validator->fails()){
             return $validator->errors();
         }else{
             $user = DB::select("SELECT id from users WHERE token = '".$req->token."'");
-            if($user){
+            if(!is_null($user)){
                 $manugrade = Productmanugrade::WHERE('producttype', '=', $req->category)->first();
-                if($manugrade){
+                if(!is_null($manugrade)){
                     return $manugrade;
                 }else{
                     $response = [
