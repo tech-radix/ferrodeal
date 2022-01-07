@@ -1,0 +1,150 @@
+
+ 
+.content{
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0.9528186274509804) 10%, rgba(159, 160, 159, 0.8379726890756303) 70%, rgba(255, 57, 57, 0.7231267507002801) 100%);
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+    
+  
+  .css-rh92k-MuiPaper-root-MuiMobileStepper-root{
+    background: transparent;
+  }
+  
+  .css-1knaqv7-MuiButtonBase-root-MuiButton-root {
+    color: #FF3939
+  }
+  
+  .MuiMobileStepper-dotActive {
+    background-color: #FF3939;
+  }
+  
+  .css-1xgsf0v {
+    height: 320px;
+  
+  }
+  
+  .head_icon {
+    margin-bottom: 20px;
+    width: 394px;
+    height: 110px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("ImgUpload.jsx/ferro\ deal-01\ comp.png");
+  }
+  
+  .btn_1 {
+    background: #FB0B02;
+    width: 300px;
+    height: 38px;
+    text-transform: uppercase;
+    border-radius: 38px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0px 6px 3px #807c7c75;
+  }
+  
+  .btn_2 {
+    background: #9FA09F;
+    width: 300px;
+    height: 38px;
+    text-transform: uppercase;
+    border-radius: 38px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-break: 2px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: none;
+    box-shadow: 0px 6px 3px #807c7c75;
+  }
+  /*media query*/
+  @media only screen and (max-width: 997px){
+    .content{
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0.9528186274509804) 10%, rgba(159, 160, 159, 0.8379726890756303) 70%, rgba(255, 57, 57, 0.7231267507002801) 100%);
+      height:100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+  }
+  @media only screen and (max-width: 425px){
+    .head_icon {
+      margin-bottom: 20px;
+      width: 330px;
+      height: 110px;
+      background-position: center;
+      background-size: cover;
+      background-image: url("ImgUpload.jsx/ferro\ deal-01\ comp.png");
+    }
+
+  }
+  @media only screen and (max-width: 393px){
+    .content{
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0.9528186274509804) 10%, rgba(159, 160, 159, 0.8379726890756303) 70%, rgba(255, 57, 57, 0.7231267507002801) 100%);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+   
+
+  }
+  @media only screen and (max-width: 335px){
+    .content{
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0.9528186274509804) 10%, rgba(159, 160, 159, 0.8379726890756303) 70%, rgba(255, 57, 57, 0.7231267507002801) 100%);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .head_icon {
+      margin-bottom: 20px;
+      width: 290px;
+      height: 110px;
+      background-position: center;
+      background-size: cover;
+      background-image: url("ImgUpload.jsx/ferro\ deal-01\ comp.png");
+    }
+    .btn_1 {
+      background: #FB0B02;
+      width: 250px;
+      height: 35px;
+      text-transform: uppercase;
+      border-radius: 38px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+      margin-top: 10px;
+      box-shadow: 0px 6px 3px #807c7c75;
+    }
+    
+    .btn_2 {
+      background: #9FA09F;
+      width: 250px;
+      height: 35px;
+      text-transform: uppercase;
+      border-radius: 38px;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      line-break: 2px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+      border: none;
+      box-shadow: 0px 6px 3px #807c7c75;
+    }
+
+  }
