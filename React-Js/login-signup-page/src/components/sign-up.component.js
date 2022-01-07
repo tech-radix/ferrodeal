@@ -42,7 +42,7 @@ export default class SignUp extends Component {
       password_confirmation: e.target.value
     });
   }
-
+                                   
   onChangephone(e) {
     this.setState({
         phone: e.target.value
@@ -120,32 +120,28 @@ export default class SignUp extends Component {
       });
   }
 
-
   render() {
     return (
-
       <>
-<div className="background">
-      <div className="submit-form">
-        {this.state.submitted ? (
+       <div className="sign-up-color">
+        <div className="submit-form">
+          {this.state.submitted ? (
           <div>
             <h4>You submitted successfully!</h4>   
           </div>
 
         ) : (    
 
-          <div className="auth-inner">
-
+          <div className="signup-auth-inner">
 
          <h3 className="signup-heading">Sign Up</h3>
-
 
          <div className="form-group">
               <label  className="text-color" htmlFor="phone">Phone number</label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter your number..."
+                placeholder="Enter only 10 digit number..."
                 id="phone"
                 required
                 value={this.state.phone}
@@ -165,6 +161,7 @@ export default class SignUp extends Component {
                 onChange={this.onChangeemail}
                 name="email"
               />
+              <input type="submit"></input>
             </div>
           
             <div className="form-group">
@@ -227,7 +224,6 @@ export default class SignUp extends Component {
                          </select>
             </div>
 
-
             <div className="form-group">
               <label className="text-color" htmlFor="password">Password</label>
               <input
@@ -271,20 +267,19 @@ export default class SignUp extends Component {
                 </div>
 
                 <p className="facilities-T-C">
-                <a href="#">Terms and conditions</a>
+                <Link to='/CreditFacilityTc'>Terms and conditions</Link>
                 </p>
 
             <button onClick={this.Signup} className="button"> SIGNUP
-              
             </button>
 
 
             <p className="forroDeal-T-C">
-                    By clicking the "Signup" button, I agree to the FerroDeal <br /> <a href="#">Terms and conditions</a>
+                    By clicking the "Signup" button, I agree to the FerroDeal <br /> <Link to='/FerroDealTc'>Terms and conditions</Link>
                 </p>
 
                 <p className="forroDeal-T-C">
-                    Already registered <br /> <Link to="./src/components/sign-in.component.js">Login</Link>
+                    Already registered <br /> <Link to='/SignIn'>Login</Link>
                 </p>
             
           </div>

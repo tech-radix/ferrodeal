@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import LoginDataService from "../services/login.service";
 import "../index-signin.css";
+import { Link } from 'react-router-dom';
+
 
 
 export default class SignIn extends Component {
@@ -54,18 +56,16 @@ export default class SignIn extends Component {
     return (
 
       <>
-      
-
+     <div className="sign-in-color" >
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
             <h4>You submitted successfully!</h4>
-            
           </div>
-        ) : (
-       
           
-          <div className="auth-inner">
+        ) : (
+          
+          <div className="signin-auth-inner">
 
           <center>
           <img className="img-logo"> 
@@ -110,12 +110,13 @@ export default class SignIn extends Component {
 </div>
 
 <div className="signup-at-login" >
-                 <a href="#">SIGNUP</a>
+<Link to='/SignUp'>SignUp</Link>
                 </div>
             
           </div>
           
         )}
+      </div>
       </div>
       </>
     );

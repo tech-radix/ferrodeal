@@ -1,38 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
-* {
-  box-sizing: border-box;
-}
-body {
-  background: linear-gradient(180deg, rgba(245,245,245,0.9528186274509804) 10%, rgba(159,160,159,0.8379726890756303) 70%, rgba(255,57,57,0.7231267507002801) 100%);
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6,label,span {
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-body, html, .App, #root, .auth-wrapper {
+body { 
   width: 100%;
   height: auto;
 }
 
+.sign-in-color {
+  width: 100%;
+  height:auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: linear-gradient(180deg, rgba(245,245,245,0.9528186274509804) 10%, rgba(159,160,159,0.8379726890756303) 70%, rgba(255,57,57,0.7231267507002801) 100%);
+}
+
 .text-color {
   color: rgba(255,57,57,0.7231267507002801);
+  font-size: 24px;
+  align-items: center;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.auth-inner {
+.signin-auth-inner {
   width: 450px;
   margin: auto;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
@@ -57,15 +45,17 @@ border-radius: 25rem;
   font-size: 15px;
   padding-top: 10px;
   font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
 .forgot-password {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   padding-top: 30px;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .forgot-password a {
   color: white;
@@ -74,10 +64,12 @@ border-radius: 25rem;
 
 .signup-at-login {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   padding-top: 10px;
+  font-weight: 500;
   color: black;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .signup-at-login a {
@@ -97,6 +89,7 @@ background: #FF3939;
   border: 0px;
   cursor: pointer;
   transition: opacity 0.25s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .img-logo{
@@ -111,5 +104,124 @@ background: #FF3939;
 
 .login-heading {
   text-align: center;
+  font-size: 32px;
+  font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .login-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .img-logo{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-image: url(./logo.png);
+    height: 100px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+  } 
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .signin-auth-inner {
+    width: 275px;
+    margin: auto;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+
+  .img-logo{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-image: url(./logo.png);
+    height: 100px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .login-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+}
+
+
+@media only screen and (max-width: 425px) {
+
+  .login-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .signin-auth-inner {
+    width: 350px;
+    margin: auto;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 20px 25px 25px 25px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+
+  .img-logo{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-image: url(./logo.png);
+    height: 75px;
+    width: 150px;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+  .signin-auth-inner {
+    width: 300px;
+    margin: auto;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 20px 25px 25px 25px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+
+  .img-logo{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-image: url(./logo.png);
+    height: 100px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .login-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
 }
