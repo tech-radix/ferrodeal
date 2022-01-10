@@ -29,7 +29,7 @@ function Hotrolledpage() {
   </nav>
 </div>
       <div className='hot-rolled-product'>
-        <div className="hot-rolled-heading">Material Type</div>
+        <div className="hot-rolled-heading">HR Product Type</div>
         <center className='hot-rolled-center' ><hr className='hot-rolled-hr' ></hr><div className='hot-rolled-box'></div><hr className='hot-rolled-hr' ></hr></center>
 
         <center><button className="hot-rolled-button-1"> Please select produt type </button></center>

@@ -29,7 +29,7 @@ function Coldrollpage() {
   </nav>
 </div>
       <div className='cold-rolled-product'>
-        <div className="cold-rolled-heading">Material Type</div>
+        <div className="cold-rolled-heading">CR Product Type</div>
         <center className='cold-rolled-center' ><hr className='cold-rolled-hr' ></hr><div className='cold-rolled-box'></div><hr className='cold-rolled-hr' ></hr></center>
 
         <center><button className="cold-rolled-button-1"> Please select produt type </button></center>

@@ -1,27 +1,33 @@
 import * as React from 'react';
 import "./updated-stock.css"
+import FadeMenu from './Hamburger';
+import {Link} from 'react-router-dom';
 
 
 function UpdatedStock() {
 
   return (
     <>
-      <div className="nav_bar">
+       <div className="nav_bar">
 
-        <nav>
-        <div className='nav_image'>
-          <div className='logo'></div>
-        </div>
-        <div class="menu">
-           <li>Home</li>
-          <li>Cart</li>
-          <li>Order history</li>
-          <li>Contact</li>
-          </div>
-          <div className="side_nav"><i class="fa fa-tasks"></i></div>
-          </nav>
-      </div>
+<nav>
 
+<div className='nav_image'>
+  <div className='logo'></div>
+</div>
+<div class="menu">
+<li><Link to="/SwipeableTextMobileStepper">Home</Link></li>
+  <li>Cart</li>
+  <li>Order history</li>
+  <li><Link to='/Contact'>Contact</Link></li>
+
+  </div>
+
+ <FadeMenu></FadeMenu>
+
+<li><i class='fas fa-sign-out-alt'></i></li>
+  </nav>
+</div>
       <div className='updated-stock-product'>
         <div className="updated-stock-heading">Clearance Sale</div>
         <center className='updated-stock-center' ><hr className='updated-stock-hr' ></hr><div className='updated-stock-box'></div><hr className='updated-stock-hr' ></hr></center> 

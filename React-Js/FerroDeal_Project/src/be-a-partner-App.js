@@ -1,26 +1,33 @@
 import * as React from 'react';
 import "./be-a-partner.css"
+import FadeMenu from './Hamburger';
+import { Link } from 'react-router-dom';
 
 
 function BeApartner() {
 
   return (
     <>
-      <div className="nav_bar">
-        <nav>
-        <div className='nav_image'>
-          <div className='logo'></div>
-        </div>
-        <div class="menu">
-           <li>Home</li>
-          <li>Cart</li>
-          <li>Order history</li>
-          <li>Contact</li>
-          </div>
-          <div className="side_nav"><i class="fa fa-tasks"></i></div>
-          </nav>
-      </div>
+       <div className="nav_bar">
 
+<nav>
+
+<div className='nav_image'>
+  <div className='logo'></div>
+</div>
+<div class="menu">
+<li><Link to="/SwipeableTextMobileStepper">Home</Link></li>
+  <li>Cart</li>
+  <li>Order history</li>
+  <li><Link to='/Contact'>Contact</Link></li>
+
+  </div>
+
+ <FadeMenu></FadeMenu>
+
+<li><i class='fas fa-sign-out-alt'></i></li>
+  </nav>
+</div>
       <div className='be-a-partner-product'>
         <div className="be-a-partner-heading">Be a partner</div>
         <center  className='be-a-partner-center' ><hr className='be-a-partner-hr'></hr><div className='be-a-partner-box'></div><hr className='be-a-partner-hr'></hr></center>

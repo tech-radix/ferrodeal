@@ -29,7 +29,7 @@ function HRPOcode() {
   </nav>
 </div>
       <div className='hrpo-product'>
-        <div className="hrpo-heading">Material Type</div>
+        <div className="hrpo-heading">HRPO Product Type</div>
         <center className='hrpo-center' ><hr className='hrpo-hr' ></hr><div className='hrpo-box'></div><hr className='hrpo-hr' ></hr></center>
 
         <center><button className="hrpo-button-1"> Please select product type </button></center>

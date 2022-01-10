@@ -1,129 +1,113 @@
-body {
-    background: white;
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+.buy-sell-scrap-heading {
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  .nav_image {
-    display: flex;
-  }
+.buy-sell-scrap-heading-2 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  .side_nav{
-    color: white;
-    margin-top: 30px;
-    margin-left: 180px;
-  }
+.buy-sell-scrap-hr {
+  width: 78px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 2px solid #101010;
+}
 
-  .logo {
-    background-image: url(./images/sdfd.png);
-    background-size: cover;
-    background-position: center;
-    width: 240px;
-    height: 50px;
-    margin-left: 90px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 2s;
-  }
+.buy-sell-scrap-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .logo:hover{
-    transform: rotate3d(0, 1, 0, 360deg);
-    }
+.buy-sell-scrap-button-1 {
+  border-radius: 25px;
+  width: 30%;
+  height: 40px;
+  font-size: 1.2rem;
+  color: black;
+  box-shadow: 0px 6px 8px 0px #808080a1;
+  font-weight: 400;
+  background: rgb(255,216,0);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+  margin-top: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  .side_nav i{
-    font-size: 30px;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
+.buy-sell-scrap-button-2 {
+  border-radius: 25px;
+  width: 30%;
+  height: 40px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+  background: #1e1f21f5;;
+  border: 0px;
+  cursor: pointer;
+  box-shadow: 0px 6px 8px 0px #808080a1;
+  transition: opacity 0.25s ease-out;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  .side_nav i:hover{
-  color:black
-  }
+.buy-sell-scrap-button-3 {
+  border-radius: 25px;
+  width: 40%;
+  height: 40px;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 400;
+  background: rgb(36 196 6);
+  box-shadow: 0px 6px 8px 0px #808080a1;
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+  margin-bottom: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  .nav_bar {
-    width: 100vw;
-  height: 87px;
-  background: linear-gradient(270.01deg, #FF0000 56.92%, rgba(255, 0, 0, 0) 74.26%);
-  box-shadow: -2px 15px 17px -6px rgba(0, 0, 0, 0.25);
-  }
 
-  nav {
-    display: flex;
-  }
+.mail {
+  margin-top: 10px;
+  margin-bottom: 10px;
 
-  .menu {
-    display: flex;
-    width: 53%;
-    justify-content: center
-  }
+}
 
-  li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 40px;
-    font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    cursor: pointer;
-    margin-top: 23px;
-  font-weight: bold;
-  line-height: 42px;
-  color: #FFFFFF;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
-  }
+i {
+  margin-right: 8px;
+  font-size: 20px;
+}
 
-  li:hover {
-    color:black;
-    text-shadow: 0px 4px 3px rgb(9 8 8 / 56%)
-  }
- 
-  .buy-sell-scrap-heading {
-    text-align: center;
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-top: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
 
-  .buy-sell-scrap-heading-2 {
-    text-align: center;
-    font-size: 25px;
-    margin-top: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
- 
-  .buy-sell-scrap-hr {
-    width: 78px;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border: 2px solid #101010;
-  }
-  
-  .buy-sell-scrap-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
 
+/*media query*/
+@media only screen and (max-width: 768px) {
   .buy-sell-scrap-button-1 {
     border-radius: 25px;
     width: 30%;
     height: 40px;
     font-size: 1.2rem;
-    color: white;
+    color: black;
+    box-shadow: 0px 6px 8px 0px #808080a1;
     font-weight: 400;
-  background: #FB9902;
+    background: rgb(255,216,0);
     border: 0px;
     cursor: pointer;
     transition: opacity 0.25s ease-out;
     margin-top: 40px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-
+  
   .buy-sell-scrap-button-2 {
     border-radius: 25px;
     width: 30%;
@@ -131,70 +115,99 @@ body {
     font-size: 1.2rem;
     color: white;
     font-weight: 400;
-  background: #1E1F21;
+    background: #1e1f21f5;;
     border: 0px;
     cursor: pointer;
+    box-shadow: 0px 6px 8px 0px #808080a1;
     transition: opacity 0.25s ease-out;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-
+  
   .buy-sell-scrap-button-3 {
     border-radius: 25px;
-    width: 30%;
+    width: 40%;
     height: 40px;
     font-size: 1.2rem;
-    color: white;
+    color: black;
     font-weight: 400;
-  background: #2EAE3B;
+    background: rgb(36 196 6);
+    box-shadow: 0px 6px 8px 0px #808080a1;
     border: 0px;
     cursor: pointer;
     transition: opacity 0.25s ease-out;
-    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
-  footer{
-    width: 100%;
-    height: 300px;
-    background-color: #101010; 
-    color:white;
-    margin-top: 50px;
-    
+
+}
+
+
+@media only screen and (max-width: 425px) {
+  .buy-sell-scrap-button-1 {
+    border-radius: 25px;
+  width: 65%;
+    height: 40px;
+    font-size:20px;
+    color: black;
+    box-shadow: 0px 6px 8px 0px #808080a1;
+    font-weight: 400;
+    background: rgb(255,216,0);
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+    margin-top: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-  .first_side{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  
+  .buy-sell-scrap-button-2 {
+    border-radius: 25px;
+    width: 65%;
+    height: 40px;
+    font-size:20px;
+    color: white;
+    font-weight: 400;
+    background: #1e1f21f5;;
+    border: 0px;
+    cursor: pointer;
+    box-shadow: 0px 6px 8px 0px #808080a1;
+    transition: opacity 0.25s ease-out;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .buy-sell-scrap-button-3 {
+    border-radius: 25px;
+    width: 75%;
+    height: 40px;
+    font-size:20px;
+    color: black;
+    font-weight: 400;
+    background: rgb(36 196 6);
+    box-shadow: 0px 6px 8px 0px #808080a1;
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+  margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .buy-sell-scrap-heading {
     text-align: center;
-    align-items: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .buy-sell-scrap-heading-2 {
+    text-align: center;
     font-size: 20px;
-  
-  }
-  
-  .footer_image{
-    background-image: url(./images/sdfd.png);
-    width: 300px;
-    height: 140px;
-    background-size: cover;
-    background-position: center;
-  } 
- 
-  .footer_text {
-    color:  #FF3939;
+    margin-top: 30 px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-  .mail{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  
-  }
-
-  i{
-    margin-right: 8px;
-    font-size: 20px;
-  }
-
- 
-  
-  
+}

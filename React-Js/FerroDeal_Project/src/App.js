@@ -13,6 +13,10 @@ import Hotrolledpage from "./Hot_rolled._code";
 import HRPOcode from "./HRPO_code";
 import Coldrollpage from "./Cold_roll_code";
 import Contact from "./Contact";
+import BeApartner from "./Be_a_partner";
+import BuySellScrap from "./buy-sell-scrap-App";
+import Uploadstock from "./upload-stock-App";
+import UpdatedStock from "./Update_stock";
 
 class App extends Component {
   render() {
@@ -34,6 +38,10 @@ class App extends Component {
           <Route exact path="/HRPOcode" component={HRPOcode }/>
           <Route exact path="/Coldrollpage" component={Coldrollpage }/>
           <Route exact path="/Contact" component={Contact }/>
+          <Route exact path="/BeApartner" component={BeApartner }/>
+          <Route exact path="/BuySellScrap" component={BuySellScrap }/>
+          <Route exact path="/Uploadstock" component={Uploadstock }/>
+          <Route exact path="/UpdatedStock" component={UpdatedStock }/>
 	     </Switch>
     </Router>
 

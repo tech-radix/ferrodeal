@@ -190,12 +190,12 @@ function SwipeableTextMobileStepper() {
 
         <div className='block'>
           <span className='service_box_1'><Link to="/getquote"><div className='box_1'></div><h3>Get Quote </h3></Link></span>
-          <span className='service_box_1'><Link to="/buy_sell_scrap"><div className='box_2'></div><h3> Buy/Sell Scrap </h3></Link></span>
-          <span className='service_box_1'><Link to="/updloadstock"><div className='box_3'></div><h3>Upload Stock</h3></Link></span>
+          <span className='service_box_1'><Link to="/BuySellScrap"><div className='box_2'></div><h3> Buy/Sell Scrap </h3></Link></span>
+          <span className='service_box_1'><Link to="/Uploadstock"><div className='box_3'></div><h3>Upload Stock</h3></Link></span>
         </div>
         <div className='block_2'>
-          <span className='service_box_1'><Link to="/updatedstock"><div className='box_4'></div><h3> Updated Stock </h3></Link></span>
-        <span className='service_box_1'>  <Link to="/be_a_partner" ><div className='box_5'></div><h3> Be A Partner </h3></Link></span>
+          <span className='service_box_1'><Link to="/UpdatedStock"><div className='box_4'></div><h3> Updated Stock </h3></Link></span>
+        <span className='service_box_1'>  <Link to="/BeApartner" ><div className='box_5'></div><h3> Be A Partner </h3></Link></span>
 
         </div>
       </div>
