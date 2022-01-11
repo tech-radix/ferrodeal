@@ -23,9 +23,7 @@ import Coilform from "./Coil_form_app"
 
 class App extends Component {
   render() {
-    return (
-      
-       
+    return ( 
        
     <Router>
        <Switch>FrontPage
