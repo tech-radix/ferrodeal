@@ -18,6 +18,7 @@ import BuySellScrap from "./buy-sell-scrap-App";
 import Uploadstock from "./upload-stock-App";
 import UpdatedStock from "./Update_stock";
 import FadeMenu from "./Hamburger";
+import FrontPage from "./frontpage";
 
 class App extends Component {
   render() {
@@ -26,8 +27,8 @@ class App extends Component {
        
        
     <Router>
-       <Switch>
-		      <Route exact path="/" component={SignUp}/>
+       <Switch>FrontPage
+		      <Route exact path="/" component={FrontPage }/>
 				  <Route exact path="/SignIn" component={SignIn }/>
           <Route exact path="/SignUp" component={SignUp }/>
           <Route exact path="/FerroDealTc" component={FerroDealTc }/>
@@ -47,7 +48,6 @@ class App extends Component {
 
 	     </Switch>
     </Router>
-
       
     );
   }

@@ -62,7 +62,7 @@ class Uploadstock extends Component {
 		return (
 		<div>
 			<br />
-			<h4>Please upload Excel file or an Image</h4>
+			<h4 className="upload-stock-content" >Please upload Excel file or an Image</h4>
 		</div>
 		);
 	}
