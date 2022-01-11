@@ -19,6 +19,7 @@ import Uploadstock from "./upload-stock-App";
 import UpdatedStock from "./Update_stock";
 import FadeMenu from "./Hamburger";
 import FrontPage from "./frontpage";
+import Coilform from "./Coil_form_app"
 
 class App extends Component {
   render() {
@@ -45,6 +46,7 @@ class App extends Component {
           <Route exact path="/Uploadstock" component={Uploadstock }/>
           <Route exact path="/UpdatedStock" component={UpdatedStock }/>
           <Route exact path="/FadeMenu" component={FadeMenu }/>
+          <Route exact path="/coilform" component={Coilform }/>
 
 	     </Switch>
     </Router>
