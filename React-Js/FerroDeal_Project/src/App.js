@@ -22,9 +22,7 @@ import FrontPage from "./frontpage";
 
 class App extends Component {
   render() {
-    return (
-      
-       
+    return ( 
        
     <Router>
        <Switch>FrontPage
