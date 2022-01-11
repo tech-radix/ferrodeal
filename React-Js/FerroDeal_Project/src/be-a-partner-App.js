@@ -39,7 +39,7 @@ function BeApartner() {
         </div>
 
         <div className='be-a-partner-product-5'>
-        <div className="be-a-partner-heading-5"><h5>We, FerroDeal is a pioneer and leading e-commerce business to business online steel trading platform in MP.<br /><br />
+        <div className="be-a-partner-heading-5"><h5 className='be-a-partner-content' >We, FerroDeal is a pioneer and leading e-commerce business to business online steel trading platform in MP.<br /><br />
  We are happy to joining you with more than 1000 Steel consumers and retailers accross Madhya Pradesh and it’s all manufacturing and trading hubs like Pithampur, Sawver road, Dewas, Govindpura etc.<br /><br />
 We are looking for our association with you to cater to all customers in this on line platform by tendering your materials and services like products and transportation accross India.
 <br /><br />Please contact with us for further information and details.</h5></div>
@@ -47,8 +47,8 @@ We are looking for our association with you to cater to all customers in this on
 
 
         <div className='be-a-partner-product-3'>
-        <center><b><p>Tell us about yourself (Optional)</p></b> </center>
-        <div className="be-a-partner-heading-3"><textarea className='be-a-partner-textarea' rows="2" cols="50" placeholder="Short description about you..."></textarea></div>
+        <center><b><p className='be-a-partner-optional' >Tell us about yourself (Optional)</p></b> </center>
+        <div className="be-a-partner-heading-textarea"><textarea className='be-a-partner-textarea' rows="2" cols="50" placeholder="Short description about you..."></textarea></div>
         </div>
 
         <div className='be-a-partner-product-3'>

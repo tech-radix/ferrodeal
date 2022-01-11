@@ -80,3 +80,282 @@
     font-size: 20px;
   }
  
+
+  @media only screen and (max-width: 768px) {
+
+    .updated-stock-heading {
+      text-align: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box {
+      width: 9px;
+      height: 9px;
+      margin-top: 17px;
+      background: red;
+    }
+  
+    
+    .updated-stock-hr {
+      width: 78px;
+      margin-top: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: 2px solid #101010;
+    }
+    
+    .updated-stock-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .updated-stock-block {
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 40px;
+    }
+    
+    
+    
+    .updated-stock-span {
+      width: auto;
+      height: 378 px;
+      border: 1 px solid;
+      text-align: center;
+      margin-left: 0 px;
+    }
+  
+    .updated-stock-h3{
+      color: #757575;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box_1 {
+      width: 450px;
+      height: 450px;
+      background-image: url(images/clearance\ sale.jpg);
+     padding: 10px;
+      background-size: cover;
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 30px;
+      border-radius: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+
+  }
+
+  @media only screen and (max-width: 425px) {
+
+    .updated-stock-heading {
+      text-align: center;
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box {
+      width: 9px;
+      height: 9px;
+      margin-top: 17px;
+      background: red;
+    }
+  
+    
+    .updated-stock-hr {
+      width: 78px;
+      margin-top: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: 2px solid #101010;
+    }
+    
+    .updated-stock-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .updated-stock-block {
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 40px;
+    }
+    
+    
+    
+    .updated-stock-span {
+      width: auto;
+      height: 378 px;
+      border: 1 px solid;
+      text-align: center;
+      margin-left: 0 px;
+    }
+  
+    .updated-stock-h3{
+      color: #757575;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box_1 {
+      width: 350px;
+      height: 350px;
+      background-image: url(images/clearance\ sale.jpg);
+     padding: 10px;
+      background-size: cover;
+      display: inline-block;
+      margin-top: 30px;
+      
+      border-radius: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+
+  }
+
+  @media only screen and (max-width: 375px) {
+    .updated-stock-heading {
+      text-align: center;
+      font-size: 25px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box {
+      width: 9px;
+      height: 9px;
+      margin-top: 17px;
+      background: red;
+    }
+  
+    
+    .updated-stock-hr {
+      width: 78px;
+      margin-top: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: 2px solid #101010;
+    }
+    
+    .updated-stock-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .updated-stock-block {
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 40px;
+    }
+    
+    
+    
+    .updated-stock-span {
+      width: auto;
+      height: 200 px;
+      border: 1 px solid;
+      text-align: center;
+     
+    }
+  
+    .updated-stock-h3{
+      color: #757575;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box_1 {
+      width: 300px;
+      height: 300px;
+      background-image: url(images/clearance\ sale.jpg);
+     padding: 10px;
+      background-size: cover;
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+  }
+
+  @media only screen and (max-width: 320px) {
+    .updated-stock-heading {
+      text-align: center;
+      font-size: 25px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box {
+      width: 9px;
+      height: 9px;
+      margin-top: 17px;
+      background: red;
+    }
+  
+    
+    .updated-stock-hr {
+      width: 78px;
+      margin-top: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: 2px solid #101010;
+    }
+    
+    .updated-stock-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .updated-stock-block {
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      
+    }
+    
+    
+    
+    .updated-stock-span {
+      
+      border: 1 px solid;
+      text-align: center;
+      
+    }
+  
+    .updated-stock-h3{
+      color: #757575;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .updated-stock-box_1 {
+      width: 250px;
+      height: 250px;
+      background-image: url(images/clearance\ sale.jpg);
+    
+      background-size: cover;
+      display: inline-block;
+      border-radius: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+  }

@@ -17,6 +17,7 @@ import BeApartner from "./Be_a_partner";
 import BuySellScrap from "./buy-sell-scrap-App";
 import Uploadstock from "./upload-stock-App";
 import UpdatedStock from "./Update_stock";
+import FadeMenu from "./Hamburger";
 
 class App extends Component {
   render() {
@@ -42,6 +43,8 @@ class App extends Component {
           <Route exact path="/BuySellScrap" component={BuySellScrap }/>
           <Route exact path="/Uploadstock" component={Uploadstock }/>
           <Route exact path="/UpdatedStock" component={UpdatedStock }/>
+          <Route exact path="/FadeMenu" component={FadeMenu }/>
+
 	     </Switch>
     </Router>
 

@@ -34,7 +34,7 @@ function UpdatedStock() {
         </div>
 
         <div className='updated-stock-block'>
-          <span className='updated-stock-span' ><div className='updated-stock-box_1'></div><h3 className='updated-stock-h3' ></h3></span>
+          <span className='updated-stock-span' ><div className='updated-stock-box_1'></div></span>
         </div>
        
 
