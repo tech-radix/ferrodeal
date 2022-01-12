@@ -36,7 +36,7 @@ select{
     margin-top: 50px;
 
 }
-input{
+.form_coil input{
     width:465px;
     height: 45px;
     text-align: center;

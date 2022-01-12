@@ -48,7 +48,7 @@ export default class SignIn extends Component {
       })
       .catch(e => {
         console.log(e);
-      });
+      });                      
   }
 
 
