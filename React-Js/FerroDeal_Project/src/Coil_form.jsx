@@ -2,9 +2,18 @@ import * as React from 'react';
 import "./coil_form.css"
 import FadeMenu from './Hamburger';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 function Coilformcode() {
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var categoryname = url.searchParams.get("category");
+  axios.get(`http://api.radixforce.com/api/getmg?token=1641463306772771&category=${categoryname}`)
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => console.error(error));
 
   return (
     <>
@@ -53,12 +62,15 @@ function Coilformcode() {
 
 <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b> 
 <input type="number"></input>
-          
-</div> 
+        </div>
+        <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b> 
+<input type="number"></input>
+
+          </div> 
+ 
 
 <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b> 
 <input type="number"></input>
-          
 </div> 
 
 <div className='payment'> <b className='lable_payment'> Payment Credit: </b> <select>
@@ -70,7 +82,7 @@ function Coilformcode() {
           <option>30 Days</option>
         
 </select></div> 
-    
+
     <button className='add_to_cart'> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
     <button className='cancel_quote'>CANCEL QUOTE</button>
       </form>
