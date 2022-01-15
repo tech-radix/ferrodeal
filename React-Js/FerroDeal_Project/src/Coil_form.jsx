@@ -1,19 +1,30 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./coil_form.css"
 import FadeMenu from './Hamburger';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 
+
 function Coilformcode() {
-  var url_string = window.location.href;
-  var url = new URL(url_string);
-  var categoryname = url.searchParams.get("category");
-  axios.get(`http://api.radixforce.com/api/getmg?token=1641463306772771&category=${categoryname}`)
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => console.error(error));
+  const [productDetails, setproductDetails] = useState([]);
+  useEffect(() => {
+    const temp = {}
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var categoryname = url.searchParams.get("category");
+    axios.get(`http://api.radixforce.com/api/getmg?token=1641463306772771&category=Hot rolled (HR)`)
+    .then(response => {
+
+     
+      setproductDetails({"data":response.data})
+      
+    })
+    .catch(error => console.error(error));
+  }, []
+  );
+
+ 
 
   return (
     <>
@@ -41,13 +52,9 @@ function Coilformcode() {
       <div className="deals"> Product details </div>
       <center className="line_hr"><hr></hr><div className='box'></div><hr></hr></center>
       <form className='form_coil'>
-
-  <div className='manufacture'> <b className='lable_coil'> Manufature: </b> <select>
-          <option>Select....</option>
-         <option>JSW/AMNS/TATA/BHUSHAN</option>
-          <option>UTTAM/SAIL/JSPL</option>
-          <option>ANY ONE</option>
-</select></div> 
+{  productDetails.length>0 ?
+  console.log(productDetails.id):null}
+  
 
 <div className='grade'> <b className='lable_grade'> Grade: </b> <select>
           <option>Select....</option>
