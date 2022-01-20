@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 
 
 function Hotrolledpage() {
-
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var categoryname = url.searchParams.get("category");
   return (
     <>
        <div className="nav_bar">
