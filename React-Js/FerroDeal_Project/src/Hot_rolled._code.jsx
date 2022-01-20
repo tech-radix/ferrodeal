@@ -40,7 +40,7 @@ function Hotrolledpage() {
          
         </div>
         <div className='hot-rolled-block_2'>
-          <span className='hot-rolled-span' ><div className='hot-rolled-box_4'></div><h3 className='hot-rolled-h3' > Slitted Coil </h3></span>
+          <span className='hot-rolled-span' ><Link to="/Slittedcoilformcode"><div className='hot-rolled-box_4'></div><h3 className='hot-rolled-h3' > Slitted Coil </h3></Link></span>
           <span className='hot-rolled-span' ><div className='hot-rolled-box_5'></div><h3 className='hot-rolled-h3' > Cut to Size</h3></span>
           
         </div>
