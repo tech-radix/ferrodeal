@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 
 
 function Hotrolledpage() {
-
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var categoryname = url.searchParams.get("category");
   return (
     <>
        <div className="nav_bar">
@@ -35,7 +37,7 @@ function Hotrolledpage() {
         <center><button className="hot-rolled-button-1"> Please select produt type </button></center>
 
         <div className='hot-rolled-block'>
-          <span className='hot-rolled-span' ><Link to="/coilform"><div className='hot-rolled-box_1'></div><h3 className='hot-rolled-h3' >Coil </h3></Link></span>
+          <span className='hot-rolled-span' ><Link to={`/coilform?category=${categoryname}&subcategory=Coil`}><div className='hot-rolled-box_1'></div><h3 className='hot-rolled-h3' >Coil </h3></Link></span>
           <span className='hot-rolled-span' ><div className='hot-rolled-box_2'></div><h3 className='hot-rolled-h3' > Sheet/Plate </h3></span>
          
         </div>
