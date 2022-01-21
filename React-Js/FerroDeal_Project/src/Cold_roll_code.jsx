@@ -35,11 +35,7 @@ function Coldrollpage() {
         <center><button className="cold-rolled-button-1"> Please select produt type </button></center>
 
         <div className='cold-rolled-block'>
-          <span className='cold-rolled-span' ><div className='cold-rolled-box_1'></div><h3 className='cold-rolled-h3' >CRCA
-          
-          
-          
-           </h3></span>
+          <span className='cold-rolled-span' ><Link to="/CRCACoilFormCode"><div className='cold-rolled-box_1'></div><h3 className='cold-rolled-h3' >CRCA</h3></Link></span>
           <span className='cold-rolled-span' ><div className='cold-rolled-box_2'></div><h3 className='cold-rolled-h3' > Sheet/Plate </h3></span>
          
         </div>

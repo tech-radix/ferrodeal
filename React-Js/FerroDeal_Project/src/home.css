@@ -548,7 +548,7 @@ nav li{
     list-style-type: none;  
   color: white;
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-right: 13px;
 }
 
@@ -590,7 +590,7 @@ nav li{
     justify-content: center;
   }
 
-  li {
+  .menu li {
     list-style-type: none;
     display: inline-block;
     margin-left: 40px;
@@ -612,8 +612,15 @@ nav li{
     margin-top: 10px;
     cursor: pointer;
 
-
   }
+
+  nav  i.fa-sign-out-alt {
+    list-style-type: none;  
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-right: 13px;
+}
 
   .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
     margin-left: 55px;
@@ -794,6 +801,9 @@ nav li{
 
   }
 
+  .menu {
+    display: none;
+  }
 
   .css-xz1uut {
     width: 100vw;

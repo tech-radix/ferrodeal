@@ -20,7 +20,9 @@ import UpdatedStock from "./Update_stock";
 import FadeMenu from "./Hamburger";
 import FrontPage from "./frontpage";
 import Coilform from "./Coil_form_app";
-import Slittedcoilformcode from "./Slitted_Coil"
+import Slittedcoilformcode from "./Slitted_Coil";
+import CutToSizeFormCode from "./cut_to_size";
+import CRCACoilFormCode from "./CRCA_COIL"
 
 class App extends Component {
   render() {
@@ -47,7 +49,8 @@ class App extends Component {
           <Route exact path="/FadeMenu" component={FadeMenu }/>
           <Route exact path="/coilform" component={Coilform }/>
           <Route exact path="/Slittedcoilformcode" component={Slittedcoilformcode }/>
-
+          <Route exact path="/CutToSizeFormCode" component={CutToSizeFormCode }/>
+          <Route exact path="/CRCACoilFormCode" component={CRCACoilFormCode }/>
 	     </Switch>
     </Router>
       
