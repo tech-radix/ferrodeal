@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import "./coil_form.css"
+import "./Slitted_Coil.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Coilformcode() {
+function Slittedcoilformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);
@@ -74,11 +74,11 @@ function Coilformcode() {
           <li><i class='fas fa-sign-out-alt'></i></li>
         </nav>
       </div>
-      <div className='coil_form_container'>
+      <div className='slitted_coil_form_container'>
         <div className="deals"> Product details </div>
         <center className="line_hr"><hr></hr><div className='box'></div><hr></hr></center>
-        <form className='form_coil' onSubmit={sumbitSelected}>
-          <div className='manufacturer'> <b className='lable_manufacturer'> Manufacturer: </b>
+        <form className='slitted_form_coil' onSubmit={sumbitSelected}>
+          <div className='slitted_manufacturer'> <b className='slitted_lable_manufacturer'> Manufacturer: </b>
               <select onChange={handleChange} name="manufacturer">
               <option>Select....</option>
                 {
@@ -89,7 +89,7 @@ function Coilformcode() {
                       </option>) : null
                 }
               </select></div>
-          <div className='grade'> <b className='lable_grade'> Grade: </b>
+          <div className='slitted_grade'> <b className='slitted_lable_grade'> Grade: </b>
             <select onChange={handleChange} name="grade">
             <option>Select....</option>
               {
@@ -100,41 +100,41 @@ function Coilformcode() {
                     </option>) : null
               }
             </select></div>
-          <div className='thick'> <b className='lable_width'> Length (m): </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.length || ""}
-             name="length"
-             />
-          </div>
-          <div className='thick'> <b className='lable_width'> Width(mm) </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.width || ""}
-             name="width"
-             />
-          </div>
-          <div className='thick'> <b className='lable_unit'> Unit : </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.unit || ""}
-             name="unit"
-             />
-          </div>
-          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+
+            <div className='slitted_thick'> <b className='slitted_lable_thickness'> Thickness (mm): </b>
             <input type="number"
              onChange={handleChange}
              value={data.values.thickness || ""}
              name="thickness"
              />
           </div>
-          <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b>
+
+         
+          <div className='slitted_thick'> <b className='slitted_lable_width'> Width(mm) </b>
+            <input type="number"
+             onChange={handleChange}
+             value={data.values.width || ""}
+             name="width"
+             />
+          </div>
+
+          <div className='slitted_trimming'> <b className='slitted_trimming'> Trimming </b>
+            <select onChange={handleChange} name="paymentCredit">
+              <option>Select....</option>
+              <option>Trimmed</option>
+              <option>Untrimmed</option>
+            </select>
+          </div>
+         
+         
+          <div className='slitted_quantity'> <b className='slitted_lable_quantity'> Quantity (MT): </b>
             <input type="number"
              onChange={handleChange}
              value={data.values.quantity || ""}
              name="quantity"/>
           </div>
-          <div className='payment'> <b className='lable_payment'> Payment Credit: </b>
+
+          <div className='slitted_payment'> <b className='slitted_lable_payment'> Payment Credit: </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
               <option>7 Days</option>
@@ -144,8 +144,8 @@ function Coilformcode() {
               <option>30 Days</option>
             </select>
           </div>
-          <button className='add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
-          <button className='cancel_quote'>CANCEL QUOTE</button>
+          <button className='slitted_add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
+          <button className='slitted_cancel_quote'>CANCEL QUOTE</button>
         </form>
       </div>
       <footer>
@@ -159,4 +159,4 @@ function Coilformcode() {
     </>
   );
 }
-export default Coilformcode;
+export default Slittedcoilformcode;

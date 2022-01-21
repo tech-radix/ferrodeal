@@ -19,7 +19,8 @@ import Uploadstock from "./upload-stock-App";
 import UpdatedStock from "./Update_stock";
 import FadeMenu from "./Hamburger";
 import FrontPage from "./frontpage";
-import Coilform from "./Coil_form_app"
+import Coilform from "./Coil_form_app";
+import Slittedcoilformcode from "./Slitted_Coil"
 
 class App extends Component {
   render() {
@@ -45,6 +46,7 @@ class App extends Component {
           <Route exact path="/UpdatedStock" component={UpdatedStock }/>
           <Route exact path="/FadeMenu" component={FadeMenu }/>
           <Route exact path="/coilform" component={Coilform }/>
+          <Route exact path="/Slittedcoilformcode" component={Slittedcoilformcode }/>
 
 	     </Switch>
     </Router>
