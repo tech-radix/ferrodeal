@@ -1,0 +1,153 @@
+#lenght_number{
+    width: 150px;
+}
+#qty{
+    width: 120px;
+}
+#unit{width: 120px;
+    margin-left: 20px;
+}
+
+.add_item{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.lenght{
+    flex-direction: column;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+}
+.unit_font{
+    flex-direction: column;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+}
+.desh{    font-size: 45px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.unit_text{
+    margin-left: 40px;
+}
+.lenght_box{
+    margin-top: 26px;
+}
+.lable_item{
+    margin-right: 60px;
+    font-size: 20px;
+}
+.add_more{
+          margin-top: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 420px;
+        cursor: pointer;
+    }
+    .add_more:hover{
+        cursor: pointer;
+    }
+   .add_more i{
+       color: #1fd526;
+       margin-left: 10px;
+   }
+   .minus{
+     /* margin-left: 24px; */
+    /* height: 15px; */
+    /* padding-bottom: 45px; */
+    padding-top: -14px;
+    /* width: 44px; */
+    padding-top: -10px;
+    /* text-align: center; */
+    font-size: 48px;
+    
+    color: red;
+    border: none;
+    /* border: 1px solid; */
+    /* border-radius: 50%; */
+    background: none;
+}
+
+/*media query*/
+@media only screen and (max-width: 425px){
+    .add_more{
+        margin-top: 25px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 122px;
+        cursor: pointer;
+  }
+  .add_item {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+  .lable_item {
+   margin-right:0px; 
+    font-size: 20px;
+} 
+.lenght_box {
+    margin-top: 0px;
+}
+
+#lenght_number {
+    width: 110px;
+}
+#unit {
+    width: 70px;
+  margin-left:8px; 
+}
+
+#qty {
+    width: 70px;
+}
+.lable_item {
+    margin-right: 0px;
+    font-size: 18px;
+}
+.lenght {
+    flex-direction: column;
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+}
+.unit_font {
+    flex-direction: column;
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+}
+.unit_text {
+    margin-left: 22px;
+}
+.desh {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+   }
+
+   @media only screen and (max-width: 425px){
+   .desh {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 6px;
+    margin-right: 0px;
+}
+#qty {
+    width: 60px;
+}
+#unit {
+    width: 60px;
+    margin-left: 8px;
+}
+}
