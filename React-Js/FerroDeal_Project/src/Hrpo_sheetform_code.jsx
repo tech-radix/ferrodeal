@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import "./coil_form.css"
+import "./sheet_form.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
-
-function Coilformcode() {
+function HrpoSheetformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
-  const [grades, setgrades] = useState([]);
+  const [grades, setgrades] = useState([]);                                                                                                                                                                              
+  const[serviceList,setServiceList]=useState([{service:""}])
+ 
   const [data, setData] = useState({
     values: {}
   })
@@ -16,6 +16,16 @@ function Coilformcode() {
     getApiData()
   }, []
   );
+  const handleServiceAdd=()=>{
+         
+    setServiceList([...serviceList, {service:""}])
+  }
+  const handleServiceRemove =(index)=>{
+    const list =[...serviceList];
+    list.splice(index,1)
+    setServiceList(list);
+  }
+ 
   const getApiData = () => {
     var url_string = window.location.href;
     var url = new URL(url_string);
@@ -33,9 +43,6 @@ function Coilformcode() {
       })
       .catch(error => console.error(error));
   }
-
-
-  
   const sumbitSelected = async(e) => {
     e.preventDefault()
     const response = await axios({
@@ -57,6 +64,10 @@ function Coilformcode() {
       }
     }));
   }
+
+
+
+  
   return (
     <>
       <div className="nav_bar">
@@ -100,14 +111,16 @@ function Coilformcode() {
                     </option>) : null
               }
             </select></div>
-            <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+
+            
+          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
             <input type="number"
              onChange={handleChange}
              value={data.values.thickness || ""}
              name="thickness"
              />
           </div>
-         
+        
           <div className='thick'> <b className='lable_width'> Width(mm) </b>
             <input type="number"
              onChange={handleChange}
@@ -116,13 +129,24 @@ function Coilformcode() {
              />
           </div>
           
-         
-          <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.quantity || ""}
-             name="quantity"/>
-          </div>
+       {serviceList.map((singleService, index)=>(
+         <div className='add_service'>
+         <div className='add_item' key={index}>
+        
+   
+            
+         <div className='lenght_box'><b className='lable_item'> Length (m): </b> <input type="number" id="lenght_number" placeholder='Enter Lenght'></input> </div>
+         <b className='desh'><i class='fas fa-minus'></i></b> 
+         <div className='lenght'><span className='qty_text'>Qty./Pcs</span> <input type="number" id="qty"></input></div>
+         <div className='unit_font'><span className='unit_text'>Unit</span><select id="unit"><option></option></select></div>
+         <div className='remove'>
+         {serviceList.length > 1&&(
+   <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
+         </div>
+         {serviceList.length - 1 === index && serviceList.length<8 &&
+         ( <div className='add_more' onClick={handleServiceAdd}>Add more lenght 
+         <i class='fas fa-plus'></i></div>)}
+          </div>)) }
           <div className='payment'> <b className='lable_payment'> Payment Credit: </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
@@ -148,4 +172,4 @@ function Coilformcode() {
     </>
   );
 }
-export default Coilformcode;
+export default  HrpoSheetformcode;

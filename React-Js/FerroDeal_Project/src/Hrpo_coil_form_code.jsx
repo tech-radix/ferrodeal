@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Coilformcode() {
+function HrpoCoilformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);
@@ -100,14 +100,13 @@ function Coilformcode() {
                     </option>) : null
               }
             </select></div>
-            <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+          <div className='thick'> <b className='lable_width'> Length (m): </b>
             <input type="number"
              onChange={handleChange}
-             value={data.values.thickness || ""}
-             name="thickness"
+             value={data.values.length || ""}
+             name="length"
              />
           </div>
-         
           <div className='thick'> <b className='lable_width'> Width(mm) </b>
             <input type="number"
              onChange={handleChange}
@@ -115,8 +114,20 @@ function Coilformcode() {
              name="width"
              />
           </div>
-          
-         
+          <div className='thick'> <b className='lable_unit'> Unit : </b>
+            <input type="number"
+             onChange={handleChange}
+             value={data.values.unit || ""}
+             name="unit"
+             />
+          </div>
+          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+            <input type="number"
+             onChange={handleChange}
+             value={data.values.thickness || ""}
+             name="thickness"
+             />
+          </div>
           <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b>
             <input type="number"
              onChange={handleChange}
@@ -148,4 +159,4 @@ function Coilformcode() {
     </>
   );
 }
-export default Coilformcode;
+export default HrpoCoilformcode;
