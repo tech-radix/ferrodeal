@@ -22,7 +22,8 @@ import FrontPage from "./frontpage";
 import Coilform from "./Coil_form_app";
 import Slittedcoilformcode from "./Slitted_Coil";
 import CutToSizeFormCode from "./cut_to_size";
-import CRCACoilFormCode from "./CRCA_COIL"
+import CRCACoilFormCode from "./CRCA_COIL";
+import CRSheetFormCode from "./CR_SHEET_FORM"
 
 class App extends Component {
   render() {
@@ -51,6 +52,8 @@ class App extends Component {
           <Route exact path="/Slittedcoilformcode" component={Slittedcoilformcode }/>
           <Route exact path="/CutToSizeFormCode" component={CutToSizeFormCode }/>
           <Route exact path="/CRCACoilFormCode" component={CRCACoilFormCode }/>
+          <Route exact path="/CRSheetFormCode" component={CRSheetFormCode }/>
+
 	     </Switch>
     </Router>
       

@@ -4,7 +4,7 @@ import "./sheet_form.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function Sheetformcode() {
+function CRSheetFormCode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -185,4 +185,4 @@ function Sheetformcode() {
     </>
   );
 }
-export default  Sheetformcode;
+export default CRSheetFormCode;
