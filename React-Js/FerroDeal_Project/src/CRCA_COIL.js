@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import "./Slitted_Coil.css"
+import "./CRCA_COIL.css";
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Slittedcoilformcode() {
-
-
- 
-
-
+function CRCACoilFormCode() {
 
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
@@ -81,11 +76,11 @@ function Slittedcoilformcode() {
           <li><i class='fas fa-sign-out-alt'></i></li>
         </nav>
       </div>
-      <div className='slitted_coil_form_container'>
+      <div className='CRCA_COIL_form_container'>
         <div className="deals"> Product details </div>
         <center className="line_hr"><hr></hr><div className='box'></div><hr></hr></center>
-        <form className='slitted_form_coil' onSubmit={sumbitSelected}>
-          <div className='slitted_manufacturer'> <b className='slitted_lable_manufacturer'> Manufacturer: </b>
+        <form className='CRCA_COIL_form_coil' onSubmit={sumbitSelected}>
+          <div className='CRCA_COIL_manufacturer'> <b className='CRCA_COIL_lable_manufacturer'> Manufacturer </b>
               <select onChange={handleChange} name="manufacturer">
               <option>Select....</option>
                 {
@@ -96,7 +91,7 @@ function Slittedcoilformcode() {
                       </option>) : null
                 }
               </select></div>
-          <div className='slitted_grade'> <b className='slitted_lable_grade'> Grade: </b>
+          <div className='CRCA_COIL_grade'> <b className='CRCA_COIL_lable_grade'> Grade </b>
             <select onChange={handleChange} name="grade">
             <option>Select....</option>
               {
@@ -107,38 +102,36 @@ function Slittedcoilformcode() {
                     </option>) : null
               }
             </select></div>
+       
 
-         
-
-            <div className='slitted_thick'> <b className='slitted_lable_thickness'> Thickness (mm): </b>
+            <div className='CRCA_COIL_quantity'> <b className='CRCA_COIL_lable_quantity'> Thickness (MM) </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter thickness'
              value={data.values.thickness || ""}
-             name="thickness"
+             name="thickness"/>
+          </div>
+        
+
+          <div className='CRCA_COIL_quantity'> <b className='CRCA_COIL_lable_quantity'> Width (MM) </b>
+            <input type="number"
+             onChange={handleChange}
+             value={data.values.width || ""}
+             name="Width"
+                 placeholder='Enter width'
              />
           </div>
 
-
-          
-        
-
-          <div className='slitted_trimming'> <b className='slitted_trimming'> Trimming </b>
-            <select onChange={handleChange} name="paymentCredit">
-              <option>Select....</option>
-              <option>Trimmed</option>
-              <option>Untrimmed</option>
-            </select>
-          </div>
-         
-         
-          <div className='slitted_quantity'> <b className='slitted_lable_quantity'> Quantity (MT): </b>
+          <div className='CRCA_COIL_quantity'> <b className='CRCA_COIL_lable_quantity'> Quantity (MT) </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter quantity'
              value={data.values.quantity || ""}
              name="quantity"/>
           </div>
+         
 
-          <div className='slitted_payment'> <b className='slitted_lable_payment'> Payment Credit: </b>
+          <div className='CRCA_COIL_payment'> <b className='CRCA_COIL_lable_payment'> Payment Credit </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
               <option>7 Days</option>
@@ -148,8 +141,8 @@ function Slittedcoilformcode() {
               <option>30 Days</option>
             </select>
           </div>
-          <button className='slitted_add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
-          <button className='slitted_cancel_quote'>CANCEL QUOTE</button>
+          <button className='CRCA_COIL_add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
+          <button className='CRCA_COIL_cancel_quote'>CANCEL QUOTE</button>
         </form>
       </div>
       <footer>
@@ -163,4 +156,4 @@ function Slittedcoilformcode() {
     </>
   );
 }
-export default Slittedcoilformcode;
+export default CRCACoilFormCode;
