@@ -38,7 +38,7 @@ function Hotrolledpage() {
 
         <div className='hot-rolled-block'>
           <span className='hot-rolled-span' ><Link to={`/coilform?category=${categoryname}&subcategory=Coil`}><div className='hot-rolled-box_1'></div><h3 className='hot-rolled-h3' >Coil </h3></Link></span>
-          <span className='hot-rolled-span' ><div className='hot-rolled-box_2'></div><h3 className='hot-rolled-h3' > Sheet/Plate </h3></span>
+          <span className='hot-rolled-span' ><Link to="/sheetform"><div className='hot-rolled-box_2'></div><h3 className='hot-rolled-h3' > Sheet/Plate </h3></Link></span>
          
         </div>
         <div className='hot-rolled-block_2'>

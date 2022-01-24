@@ -35,8 +35,8 @@ function HRPOcode() {
         <center><button className="hrpo-button-1"> Please select product type </button></center>
 
         <div className='hrpo-block'>
-          <span className='hrpo-span' ><div className='hrpo-box_1'></div><h3 className='hrpo-h3' >Coil </h3></span>
-          <span className='hrpo-span' ><div className='hrpo-box_2'></div><h3 className='hrpo-h3' > Sheet/Plate </h3></span>
+          <span className='hrpo-span' ><Link to="/coilform"><div className='hrpo-box_1'></div><h3 className='hrpo-h3' >Coil </h3></Link></span>
+          <span className='hrpo-span' ><Link to="/sheetform"><div className='hrpo-box_2'></div><h3 className='hrpo-h3' > Sheet/Plate </h3></Link></span>
          
         </div>
         <div className='hrpo-block_2'>
