@@ -153,7 +153,7 @@ function Sheetformcode() {
          {serviceList.length > 1&&(
    <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
          </div>
-         {serviceList.length - 1 === index || serviceList.length<8 &&
+         {serviceList.length - 1 === index && serviceList.length<8 &&
          ( <div className='add_more' onClick={handleServiceAdd}>Add more lenght 
          <i class='fas fa-plus'></i></div>)}
           </div>)) }
