@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import "./Slitted_Coil.css"
+import "./CR_Slitted.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function  Slittedcoilformcode() {
+function  CRSlittedcoilformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -195,4 +195,4 @@ function  Slittedcoilformcode() {
     </>
   );
 }
-export default   Slittedcoilformcode;
+export default  CRSlittedcoilformcode;

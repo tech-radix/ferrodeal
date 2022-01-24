@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import "./sheet_form.css"
+import "./CR_SHEET_FORM.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -153,7 +153,7 @@ function CRSheetFormCode() {
          {serviceList.length > 1&&(
    <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
          </div>
-         {serviceList.length - 1 === index || serviceList.length<8 &&
+         {serviceList.length - 1 === index && serviceList.length<8 &&
          ( <div className='add_more' onClick={handleServiceAdd}>Add more lenght 
          <i class='fas fa-plus'></i></div>)}
           </div>)) }
@@ -185,4 +185,4 @@ function CRSheetFormCode() {
     </>
   );
 }
-export default CRSheetFormCode;
+export default  CRSheetFormCode;

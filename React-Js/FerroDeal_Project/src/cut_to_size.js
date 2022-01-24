@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import "./cut_to_size.css";
+
+import "./cut_to_size.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
-
-function CutToSizeFormCode() {
-
+function  CutToSizeFormCode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
-  const [grades, setgrades] = useState([]);
+  const [grades, setgrades] = useState([]);                                                                                                                                                                              
+  const[serviceList,setServiceList]=useState([{service:""}])
+ 
   const [data, setData] = useState({
     values: {}
   })
@@ -17,6 +17,22 @@ function CutToSizeFormCode() {
     getApiData()
   }, []
   );
+
+
+
+
+  const handleServiceAdd=()=>{
+         
+    setServiceList([...serviceList, {service:""}])
+  }
+  const handleServiceRemove =(index)=>{
+    const list =[...serviceList];
+    list.splice(index,1)
+    setServiceList(list);
+  }
+ 
+
+  
   const getApiData = () => {
     var url_string = window.location.href;
     var url = new URL(url_string);
@@ -34,9 +50,6 @@ function CutToSizeFormCode() {
       })
       .catch(error => console.error(error));
   }
-
-
-  
   const sumbitSelected = async(e) => {
     e.preventDefault()
     const response = await axios({
@@ -58,9 +71,12 @@ function CutToSizeFormCode() {
       }
     }));
   }
+
+
+
+  
   return (
     <>
-
       <div className="nav_bar">
         <nav>
           <div className='nav_image'>
@@ -76,11 +92,11 @@ function CutToSizeFormCode() {
           <li><i class='fas fa-sign-out-alt'></i></li>
         </nav>
       </div>
-      <div className='cut_to_size_coil_form_container'>
+      <div className='coil_form_container'>
         <div className="deals"> Product details </div>
         <center className="line_hr"><hr></hr><div className='box'></div><hr></hr></center>
-        <form className='cut_to_size_form_coil' onSubmit={sumbitSelected}>
-          <div className='slitted_manufacturer'> <b className='cut_to_size_lable_manufacturer'> Manufacturer: </b>
+        <form className='form_coil' onSubmit={sumbitSelected}>
+          <div className='manufacturer'> <b className='lable_manufacturer'> Manufacturer: </b>
               <select onChange={handleChange} name="manufacturer">
               <option>Select....</option>
                 {
@@ -91,7 +107,7 @@ function CutToSizeFormCode() {
                       </option>) : null
                 }
               </select></div>
-          <div className='cut_to_size_grade'> <b className='cut_to_size_lable_grade'> Grade: </b>
+          <div className='grade'> <b className='lable_grade'> Grade: </b>
             <select onChange={handleChange} name="grade">
             <option>Select....</option>
               {
@@ -102,28 +118,54 @@ function CutToSizeFormCode() {
                     </option>) : null
               }
             </select></div>
-       
 
-            <div className='cut_to_size_quantity'> <b className='cut_to_size_lable_quantity'> Thickness (MM) </b>
+            
+          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
             <input type="number"
              onChange={handleChange}
-             placeholder='Enter thickness'
              value={data.values.thickness || ""}
-             name="thickness"/>
+             name="thickness"
+             placeholder='Enter thickness'
+             />
           </div>
-        
 
-          <div className='cut_to_size_quantity'> <b className='cut_to_size_lable_quantity'> Width (MM) </b>
-            <input type="number"
+
+
+          <div className='payment'> <b className='slitted_lable_payment_1'> width (mm): </b>
+          <input type="number"
              onChange={handleChange}
              value={data.values.width || ""}
-             name="Width"
-                 placeholder='Enter width'
+             name="width"
+             placeholder='Enter width'
              />
           </div>
          
 
-          <div className='cut_to_size_payment'> <b className='cut_to_size_lable_payment'> Payment Credit: </b>
+
+
+       {serviceList.map((singleService, index)=>(
+         <div className='add_service'>
+         <div className='add_item' key={index}>
+        
+   
+            
+         <div className='lenght_box'><b className='slitted_lable_item'> Length (mm): </b> <input type="number" id="slitted_lenght_number" placeholder='Enter length'></input> </div>
+         <b className='slitted_desh'><i class='fas fa-minus'></i></b> 
+         <div className='lenght'><span className='qty_text'>Qty. (MT)</span> <input type="number" id="qty"></input></div>
+         
+         <div className='remove'>
+         {serviceList.length > 1&&(
+   <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
+         </div>
+         {serviceList.length - 1 === index && serviceList.length<8 &&
+         ( <div className='slitted_add_more' onClick={handleServiceAdd}>Add more lenght 
+         <i class='fas fa-plus'></i></div>)}
+          </div>)) }
+
+
+
+
+          <div className='payment'> <b className='slitted_payment'> Payment Credit: </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
               <option>7 Days</option>
@@ -133,8 +175,8 @@ function CutToSizeFormCode() {
               <option>30 Days</option>
             </select>
           </div>
-          <button className='cut_to_size_add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
-          <button className='cut_to_size_cancel_quote'>CANCEL QUOTE</button>
+          <button className='add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
+          <button className='cancel_quote'>CANCEL QUOTE</button>
         </form>
       </div>
       <footer>

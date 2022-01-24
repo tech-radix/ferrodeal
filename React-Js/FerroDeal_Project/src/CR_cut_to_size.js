@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import "./Slitted_Coil.css"
+import "./CR_cut_to_size.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function  Slittedcoilformcode() {
+function CRCutToSizeFormCode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -125,6 +125,18 @@ function  Slittedcoilformcode() {
              onChange={handleChange}
              value={data.values.thickness || ""}
              name="thickness"
+             placeholder='Enter thickness'
+             />
+          </div>
+
+
+
+          <div className='payment'> <b className='slitted_lable_payment_1'> width (mm): </b>
+          <input type="number"
+             onChange={handleChange}
+             value={data.values.width || ""}
+             name="width"
+             placeholder='Enter width'
              />
           </div>
          
@@ -137,37 +149,20 @@ function  Slittedcoilformcode() {
         
    
             
-         <div className='lenght_box'><b className='slitted_lable_item'> Width (mm): </b> <input type="number" id="slitted_lenght_number" placeholder='Enter width'></input> </div>
+         <div className='lenght_box'><b className='slitted_lable_item'> Length (mm): </b> <input type="number" id="slitted_lenght_number" placeholder='Enter length'></input> </div>
          <b className='slitted_desh'><i class='fas fa-minus'></i></b> 
-         <div className='lenght'><span className='qty_text'>Number of slits</span> <input type="number" id="qty"></input></div>
+         <div className='lenght'><span className='qty_text'>Qty. (MT)</span> <input type="number" id="qty"></input></div>
          
          <div className='remove'>
          {serviceList.length > 1&&(
    <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
          </div>
          {serviceList.length - 1 === index && serviceList.length<8 &&
-         ( <div className='slitted_add_more' onClick={handleServiceAdd}>Add more width
+         ( <div className='slitted_add_more' onClick={handleServiceAdd}>Add more lenght 
          <i class='fas fa-plus'></i></div>)}
           </div>)) }
 
 
-          <div className='payment'> <b className='slitted_lable_payment_1'> Trimming </b>
-            <select onChange={handleChange} name="paymentCredit">
-              <option>Select....</option>
-              <option>Trimmed</option>
-              <option>untrimmed</option>
-              
-            </select>
-          </div>
-
-
-          <div className='thick'> <b className='lable_quantity'> Quantity (MT): </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.thickness || ""}
-             name="thickness"
-             />
-          </div>
 
 
           <div className='payment'> <b className='slitted_payment'> Payment Credit: </b>
@@ -195,4 +190,4 @@ function  Slittedcoilformcode() {
     </>
   );
 }
-export default   Slittedcoilformcode;
+export default CRCutToSizeFormCode;
