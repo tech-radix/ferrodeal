@@ -1,4 +1,4 @@
-#slitted_lenght_number{
+#lenght_number{
     width: 150px;
 }
 #qty{
@@ -10,7 +10,7 @@
 
 .add_item{
     margin-top: 20px;
-    display: flex; 
+    display: flex;
     flex-direction: row;
 }
 .lenght{
@@ -25,11 +25,11 @@
     font-size: 18px;
     font-weight: 700;
 }
-.slitted_desh{    font-size: 45px;
+.desh{    font-size: 45px;
     text-align: center;
     margin-top: 5px;
-    margin-left: 55px;
-    margin-right: 50px;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 .unit_text{
     margin-left: 40px;
@@ -37,21 +37,21 @@
 .lenght_box{
     margin-top: 26px;
 }
-.slitted_lable_item{
-    margin-right: 35px;
+.lable_item{
+    margin-right: 60px;
     font-size: 20px;
 }
-.slitted_add_more{
+.add_more{
           margin-top: 25px;
         font-size: 20px;
         font-weight: 500;
         margin-left: 420px;
         cursor: pointer;
     }
-    .slitted_add_more:hover{
+    .add_more:hover{
         cursor: pointer;
     }
-   .slitted_add_more i{
+   .add_more i{
        color: #1fd526;
        margin-left: 10px;
    }
@@ -72,40 +72,15 @@
     background: none;
 }
 
-.slitted_lable_payment_1 {
-    margin-right: 75px;
-    font-size: 20px;
-}
-
-.lable_quantity {
-    margin-right: 32px;
-    font-size: 20px;
-}
-
-.slitted_payment {
-    margin-right: 25px;
-    font-size: 20px;
-}
-
-
-@media only screen and (max-width: 768px){
-    .slitted_lable_payment_1 {
-        margin-right: 75px;
-        font-size: 20px;
-    }
-}
-
-
 /*media query*/
 @media only screen and (max-width: 425px){
-    .slitted_add_more{
+    .add_more{
         margin-top: 25px;
-      font-size: 20px;
-      font-weight: 500;
-      margin-left: 180px;
-      cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 122px;
+        cursor: pointer;
   }
-
   .add_item {
     margin-top: 20px;
     display: flex;
@@ -150,7 +125,7 @@
 .unit_text {
     margin-left: 22px;
 }
-.slitted_desh {
+.desh {
     font-size: 45px;
     text-align: center;
     margin-top: 12px;
@@ -161,12 +136,12 @@
    }
 
    @media only screen and (max-width: 425px){
-   .slitted_desh {
+   .desh {
     font-size: 45px;
     text-align: center;
     margin-top: 12px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 6px;
+    margin-right: 0px;
 }
 #qty {
     width: 60px;
@@ -174,52 +149,5 @@
 #unit {
     width: 60px;
     margin-left: 8px;
-}
-}
-
-@media only screen and (max-width: 375px){
-
-    .slitted_desh {
-        font-size: 45px;
-        text-align: center;
-        margin-top: 12px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    #slitted_lenght_number{
-        width: 100px;
-        
-    }
-
-    .slitted_add_more{
-        margin-top: 25px;
-      font-size: 20px;
-      font-weight: 500;
-      margin-left: 130px;
-      cursor: pointer;
-  }
-
-    .slitted_lable_item{
-        
-        font-size: 18px;
-    }
-
-}
-
-@media only screen and (max-width: 320px){
-    .slitted_add_more{
-        margin-top: 25px;
-      font-size: 20px;
-      font-weight: 500;
-      margin-left: 100px;
-      cursor: pointer;
-  }
-
-
-
-.slitted_lable_item{
-        margin: 0px;
-    font-size: 18px;
 }
 }

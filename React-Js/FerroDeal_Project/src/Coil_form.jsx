@@ -101,7 +101,7 @@ function Coilformcode() {
               }
             </select></div>
             <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
-            <input type="number"
+            <input type="number"  placeholder='Enter thickness'
              onChange={handleChange}
              value={data.values.thickness || ""}
              name="thickness"
@@ -109,7 +109,7 @@ function Coilformcode() {
           </div>
          
           <div className='thick'> <b className='lable_width'> Width(mm) </b>
-            <input type="number"
+            <input type="number"  placeholder='Enter width'
              onChange={handleChange}
              value={data.values.width || ""}
              name="width"

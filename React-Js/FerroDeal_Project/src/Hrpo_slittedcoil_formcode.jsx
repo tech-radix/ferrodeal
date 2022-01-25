@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
+
 import "./Slitted_Coil.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
-
-function HrpoSlittedcoilformcode() {
-
-
- 
-
-
-
+function  HRPOSlittedcoilformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
-  const [grades, setgrades] = useState([]);
+  const [grades, setgrades] = useState([]);                                                                                                                                                                              
+  const[serviceList,setServiceList]=useState([{service:""}])
+ 
   const [data, setData] = useState({
     values: {}
   })
@@ -22,6 +17,22 @@ function HrpoSlittedcoilformcode() {
     getApiData()
   }, []
   );
+
+
+
+
+  const handleServiceAdd=()=>{
+         
+    setServiceList([...serviceList, {service:""}])
+  }
+  const handleServiceRemove =(index)=>{
+    const list =[...serviceList];
+    list.splice(index,1)
+    setServiceList(list);
+  }
+ 
+
+  
   const getApiData = () => {
     var url_string = window.location.href;
     var url = new URL(url_string);
@@ -39,9 +50,6 @@ function HrpoSlittedcoilformcode() {
       })
       .catch(error => console.error(error));
   }
-
-
-  
   const sumbitSelected = async(e) => {
     e.preventDefault()
     const response = await axios({
@@ -63,9 +71,12 @@ function HrpoSlittedcoilformcode() {
       }
     }));
   }
+
+
+
+  
   return (
     <>
-
       <div className="nav_bar">
         <nav>
           <div className='nav_image'>
@@ -81,11 +92,11 @@ function HrpoSlittedcoilformcode() {
           <li><i class='fas fa-sign-out-alt'></i></li>
         </nav>
       </div>
-      <div className='slitted_coil_form_container'>
+      <div className='coil_form_container'>
         <div className="deals"> Product details </div>
         <center className="line_hr"><hr></hr><div className='box'></div><hr></hr></center>
-        <form className='slitted_form_coil' onSubmit={sumbitSelected}>
-          <div className='slitted_manufacturer'> <b className='slitted_lable_manufacturer'> Manufacturer: </b>
+        <form className='form_coil' onSubmit={sumbitSelected}>
+          <div className='manufacturer'> <b className='lable_manufacturer'> Manufacturer: </b>
               <select onChange={handleChange} name="manufacturer">
               <option>Select....</option>
                 {
@@ -96,7 +107,7 @@ function HrpoSlittedcoilformcode() {
                       </option>) : null
                 }
               </select></div>
-          <div className='slitted_grade'> <b className='slitted_lable_grade'> Grade: </b>
+          <div className='grade'> <b className='lable_grade'> Grade: </b>
             <select onChange={handleChange} name="grade">
             <option>Select....</option>
               {
@@ -108,9 +119,49 @@ function HrpoSlittedcoilformcode() {
               }
             </select></div>
 
+            
+          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+            <input type="number"  placeholder='Enter thickness'
+             onChange={handleChange}
+             value={data.values.thickness || ""}
+             name="thickness"
+             />
+          </div>
          
 
-            <div className='slitted_thick'> <b className='slitted_lable_thickness'> Thickness (mm): </b>
+
+
+       {serviceList.map((singleService, index)=>(
+         <div className='add_service'>
+         <div className='add_item' key={index}>
+        
+   
+            
+         <div className='lenght_box'><b className='slitted_lable_item'> Width (mm): </b> <input type="number" id="slitted_lenght_number" placeholder='Enter width'></input> </div>
+         <b className='slitted_desh'><i class='fas fa-minus'></i></b> 
+         <div className='lenght'><span className='qty_text'>Number of slits</span> <input type="number" id="qty"></input></div>
+         
+         <div className='remove'>
+         {serviceList.length > 1&&(
+   <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
+         </div>
+         {serviceList.length - 1 === index && serviceList.length<8 &&
+         ( <div className='slitted_add_more' onClick={handleServiceAdd}>Add more width
+         <i class='fas fa-plus'></i></div>)}
+          </div>)) }
+
+
+          <div className='payment'> <b className='slitted_lable_payment_1'> Trimming </b>
+            <select onChange={handleChange} name="paymentCredit">
+              <option>Select....</option>
+              <option>Trimmed</option>
+              <option>untrimmed</option>
+              
+            </select>
+          </div>
+
+
+          <div className='thick'> <b className='lable_quantity'> Quantity (MT): </b>
             <input type="number"
              onChange={handleChange}
              value={data.values.thickness || ""}
@@ -119,26 +170,7 @@ function HrpoSlittedcoilformcode() {
           </div>
 
 
-          
-        
-
-          <div className='slitted_trimming'> <b className='slitted_trimming'> Trimming </b>
-            <select onChange={handleChange} name="paymentCredit">
-              <option>Select....</option>
-              <option>Trimmed</option>
-              <option>Untrimmed</option>
-            </select>
-          </div>
-         
-         
-          <div className='slitted_quantity'> <b className='slitted_lable_quantity'> Quantity (MT): </b>
-            <input type="number"
-             onChange={handleChange}
-             value={data.values.quantity || ""}
-             name="quantity"/>
-          </div>
-
-          <div className='slitted_payment'> <b className='slitted_lable_payment'> Payment Credit: </b>
+          <div className='payment'> <b className='slitted_payment'> Payment Credit: </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
               <option>7 Days</option>
@@ -148,8 +180,8 @@ function HrpoSlittedcoilformcode() {
               <option>30 Days</option>
             </select>
           </div>
-          <button className='slitted_add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
-          <button className='slitted_cancel_quote'>CANCEL QUOTE</button>
+          <button className='add_to_cart' type='submit' onClick={sumbitSelected}> <i class='fas fa-cart-plus'></i> ADD TO CART </button>
+          <button className='cancel_quote'>CANCEL QUOTE</button>
         </form>
       </div>
       <footer>
@@ -163,4 +195,4 @@ function HrpoSlittedcoilformcode() {
     </>
   );
 }
-export default HrpoSlittedcoilformcode;
+export default   HRPOSlittedcoilformcode;

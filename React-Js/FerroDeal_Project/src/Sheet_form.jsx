@@ -4,7 +4,7 @@ import "./sheet_form.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function HRPOSheetformcode() {
+function Sheetformcode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -173,4 +173,4 @@ function HRPOSheetformcode() {
     </>
   );
 }
-export default  HRPOSheetformcode;
+export default  Sheetformcode;

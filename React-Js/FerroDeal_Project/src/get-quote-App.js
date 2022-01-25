@@ -40,12 +40,12 @@ function GetQuote() {
           <span className='get-quote-span' ><Link to="/Coldrollpage"><div className='get-quote-box_3'></div><h3 className='get-quote-h3' >Cold rolled - CR</h3></Link></span>
         </div>
         <div className='get-quote-block_2'>
-          <span className='get-quote-span' ><div className='get-quote-box_4'></div><h3 className='get-quote-h3' > Galvanized - GAL </h3></span>
-          <span className='get-quote-span' ><div className='get-quote-box_5'></div><h3 className='get-quote-h3' > Color Coated</h3></span>
-          <span className='get-quote-span' ><div className='get-quote-box_6'></div><h3 className='get-quote-h3' > TMT BARS </h3></span>
+          <span className='get-quote-span' ><Link to="/comingsoon"><div className='get-quote-box_4'></div><h3 className='get-quote-h3' > Galvanized - GAL </h3></Link></span>
+          <span className='get-quote-span' ><Link to="/comingsoon"><div className='get-quote-box_5'></div><h3 className='get-quote-h3' > Color Coated</h3></Link></span>
+          <span className='get-quote-span' ><Link to="/comingsoon"><div className='get-quote-box_6'></div><h3 className='get-quote-h3' > TMT BARS </h3></Link></span>
         </div>
         <div className='get-quote-block_3'>
-          <span className='get-quote-span' ><div className='get-quote-box_7'></div><h3 className='get-quote-h3' > MS STRUCTURES </h3></span>
+          <span className='get-quote-span' ><Link to="/comingsoon"><div className='get-quote-box_7'></div><h3 className='get-quote-h3' > MS STRUCTURES </h3></Link></span>
         </div>
       </div>
 

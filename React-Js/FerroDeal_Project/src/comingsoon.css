@@ -1,0 +1,25 @@
+.comingsoon_box{
+    width: 100%;
+    height: auto;
+display: flex;
+justify-content: center;} 
+
+.working_on_it{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    font-size: 49px;
+    margin-top: 126px;
+  
+}
+/*MEDIA QUERY*/
+@media only screen and (max-width:425px){
+    .working_on_it {
+        width: 100%;
+        height: 270px;
+        text-align: center;
+        font-size: 35px;
+        margin-top: 126px;
+    
+    }
+}
