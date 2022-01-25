@@ -104,22 +104,46 @@ function HrpoCoilformcode() {
             <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
             <input type="number" placeholder='Enter thickness'
              onChange={handleChange}
+
              value={data.values.thickness || ""}
              name="thickness"
+
+             placeholder='Enter length'
+             value={data.values.length || ""}
+             name="length"
+
              />
           </div>
           <div className='thick'> <b className='lable_width'> Width(mm) </b>
             <input type="number" placeholder='Enter width'
              onChange={handleChange}
+             placeholder='Enter width'
              value={data.values.width || ""}
              name="width"
              />
           </div>
-     
-         
+
+          <div className='thick'> <b className='lable_unit'> Unit : </b>
+            <input type="number"
+             onChange={handleChange}
+             placeholder='Enter unit'
+             value={data.values.unit || ""}
+             name="unit"
+             />
+          </div>
+          <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
+            <input type="number"
+             onChange={handleChange}
+             placeholder='Enter thickness'
+             value={data.values.thickness || ""}
+             name="thickness"
+             />
+          </div>
+
           <div className='quantity'> <b className='lable_quantity'> Quantity (MT): </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter quantity'
              value={data.values.quantity || ""}
              name="quantity"/>
           </div>

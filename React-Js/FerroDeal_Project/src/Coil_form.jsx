@@ -104,6 +104,7 @@ function Coilformcode() {
             <input type="number"  placeholder='Enter thickness'
              onChange={handleChange}
              value={data.values.thickness || ""}
+             placeholder='Enter thickness'
              name="thickness"
              />
           </div>
@@ -112,6 +113,7 @@ function Coilformcode() {
             <input type="number"  placeholder='Enter width'
              onChange={handleChange}
              value={data.values.width || ""}
+             placeholder='Enter width'
              name="width"
              />
           </div>
@@ -121,6 +123,7 @@ function Coilformcode() {
             <input type="number"
              onChange={handleChange}
              value={data.values.quantity || ""}
+             placeholder='Enter quantity'
              name="quantity"/>
           </div>
           <div className='payment'> <b className='lable_payment'> Payment Credit: </b>
