@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import "./sheet_form.css"
+
+import "./CR_cut_to_size.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function HrpoSheetformcode() {
+function CRCutToSizeFormCode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -124,17 +125,21 @@ function HrpoSheetformcode() {
              onChange={handleChange}
              value={data.values.thickness || ""}
              name="thickness"
+             placeholder='Enter thickness'
              />
           </div>
-        
-          <div className='thick'> <b className='lable_width'> Width(mm) </b>
-            <input type="number"
+
+
+
+          <div className='payment'> <b className='slitted_lable_payment_1'> width (mm): </b>
+          <input type="number"
              onChange={handleChange}
              value={data.values.width || ""}
              name="width"
+             placeholder='Enter width'
              />
           </div>
-          
+         
 
 
 
@@ -144,22 +149,23 @@ function HrpoSheetformcode() {
         
    
             
-         <div className='lenght_box'><b className='lable_item'> Length (m): </b> <input type="number" id="lenght_number" placeholder='Enter Lenght'></input> </div>
-         <b className='desh'><i class='fas fa-minus'></i></b> 
-         <div className='lenght'><span className='qty_text'>Qty./Pcs</span> <input type="number" id="qty"></input></div>
-         <div className='unit_font'><span className='unit_text'>Unit</span><select id="unit"><option></option></select></div>
+         <div className='lenght_box'><b className='slitted_lable_item'> Length (mm): </b> <input type="number" id="slitted_lenght_number" placeholder='Enter length'></input> </div>
+         <b className='slitted_desh'><i class='fas fa-minus'></i></b> 
+         <div className='lenght'><span className='qty_text'>Qty. (MT)</span> <input type="number" id="qty"></input></div>
+         
          <div className='remove'>
          {serviceList.length > 1&&(
    <button className='minus' onClick={()=> handleServiceRemove(index)}>-</button>)}</div>
          </div>
          {serviceList.length - 1 === index && serviceList.length<8 &&
-         ( <div className='add_more' onClick={handleServiceAdd}>Add more lenght 
+         ( <div className='slitted_add_more' onClick={handleServiceAdd}>Add more lenght 
          <i class='fas fa-plus'></i></div>)}
           </div>)) }
 
 
 
-          <div className='payment'> <b className='lable_payment'> Payment Credit: </b>
+
+          <div className='payment'> <b className='slitted_payment'> Payment Credit: </b>
             <select onChange={handleChange} name="paymentCredit">
               <option>Select....</option>
               <option>7 Days</option>
@@ -184,4 +190,4 @@ function HrpoSheetformcode() {
     </>
   );
 }
-export default  HrpoSheetformcode;
+export default CRCutToSizeFormCode;

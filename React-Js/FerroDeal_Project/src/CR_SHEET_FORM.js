@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import "./sheet_form.css"
+
+import "./CR_SHEET_FORM.css"
 import FadeMenu from './Hamburger';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-function HrpoSheetformcode() {
+function CRSheetFormCode() {
   const [productDetails, setproductDetails] = useState([]);
   const [manufacturer, setmanufacturer] = useState([]);
   const [grades, setgrades] = useState([]);                                                                                                                                                                              
@@ -184,4 +185,4 @@ function HrpoSheetformcode() {
     </>
   );
 }
-export default  HrpoSheetformcode;
+export default  CRSheetFormCode;

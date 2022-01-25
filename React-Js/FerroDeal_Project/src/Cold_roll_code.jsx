@@ -36,12 +36,12 @@ function Coldrollpage() {
 
         <div className='cold-rolled-block'>
           <span className='cold-rolled-span' ><Link to="/CRCACoilFormCode"><div className='cold-rolled-box_1'></div><h3 className='cold-rolled-h3' >CRCA</h3></Link></span>
-          <span className='cold-rolled-span' ><div className='cold-rolled-box_2'></div><h3 className='cold-rolled-h3' > Sheet/Plate </h3></span>
-         
+          <span className='cold-rolled-span' ><Link to="/CRSheetFormCode"><div className='cold-rolled-box_2'></div><h3 className='cold-rolled-h3' > Sheet/Plate </h3></Link></span>
+          
         </div>
         <div className='cold-rolled-block_2'>
-          <span className='cold-rolled-span' ><div className='cold-rolled-box_4'></div><h3 className='cold-rolled-h3' > Slitted Coil </h3></span>
-          <span className='cold-rolled-span' ><div className='cold-rolled-box_5'></div><h3 className='cold-rolled-h3' > Cut to Size</h3></span>
+          <span className='cold-rolled-span' ><Link to="/CRSlittedcoilformcode"><div className='cold-rolled-box_4'></div><h3 className='cold-rolled-h3' > Slitted Coil </h3></Link></span>
+          <span className='cold-rolled-span' ><Link to="/CRCutToSizeFormCode"><div className='cold-rolled-box_5'></div><h3 className='cold-rolled-h3' > Cut to Size</h3></Link></span>
           
         </div>
       
