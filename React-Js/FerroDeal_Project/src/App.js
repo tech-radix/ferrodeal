@@ -22,19 +22,12 @@ import FrontPage from "./frontpage";
 import Coilform from "./Coil_form_app";
 import Slittedcoilformcode from "./Slitted_Coil";
 import CutToSizeFormCode from "./cut_to_size";
-<<<<<<< HEAD
- import CRCACoilFormCode from "./CRCA_COIL"
-=======
-import CRCACoilFormCode from "./CRCA_COIL";
+ import CRCACoilFormCode from "./CRCA_COIL";
 import CRSheetFormCode from "./CR_SHEET_FORM";
-import Sheetform from "./Sheet_form_app";
+
 import CRSlittedcoilformcode from "./CR_Slitted";
 import CRCutToSizeFormCode from "./CR_cut_to_size"
-
->>>>>>> 671575788b7f547449c270e66dc10911a15245fd
-
 import HrpoCoilform from "./Hrpo_coil_form_app"
-import HrpoSheetform from "./Sheet_form_app"
 import HrpoSlittedform from "./Hrpo_slittedcoil_form_app"
 class App extends Component {
   render() {
@@ -62,20 +55,13 @@ class App extends Component {
           <Route exact path="/coilform" component={Coilform }/>
           <Route exact path="/Slittedcoilformcode" component={Slittedcoilformcode }/>
           <Route exact path="/CutToSizeFormCode" component={CutToSizeFormCode }/>
-          <Route exact path="/CRCACoilFormCode" component={CRCACoilFormCode }/>
-<<<<<<< HEAD
-          
+          <Route exact path="/CRCACoilFormCode" component={CRCACoilFormCode }/>   
           <Route exact path="/HRPO_coil_form" component={HrpoCoilform}/>
-         <Route exact path="/HRPO_sheet_form" component={HrpoSheetform}/>
          <Route exact path ="/HRPO_slitted_form" component={HrpoSlittedform}/>
-
-
-=======
           <Route exact path="/CRSheetFormCode" component={CRSheetFormCode }/>
-          <Route path="/sheetform" component={Sheetform} />
+          
           <Route path="/CRSlittedcoilformcode" component={CRSlittedcoilformcode} />
           <Route path="/CRCutToSizeFormCode" component={CRCutToSizeFormCode} />
->>>>>>> 671575788b7f547449c270e66dc10911a15245fd
 	     </Switch>
     </Router>
       

@@ -123,6 +123,7 @@ function  CRSlittedcoilformcode() {
           <div className='thick'> <b className='lable_thickness'> Thickness (mm): </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter thickness'
              value={data.values.thickness || ""}
              name="thickness"
              />
@@ -164,6 +165,7 @@ function  CRSlittedcoilformcode() {
           <div className='thick'> <b className='lable_quantity'> Quantity (MT): </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter quantity'
              value={data.values.thickness || ""}
              name="thickness"
              />

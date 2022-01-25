@@ -124,6 +124,7 @@ function CRSheetFormCode() {
             <input type="number"
              onChange={handleChange}
              value={data.values.thickness || ""}
+             placeholder='Enter thickness'
              name="thickness"
              />
           </div>
@@ -131,6 +132,7 @@ function CRSheetFormCode() {
           <div className='thick'> <b className='lable_width'> Width(mm) </b>
             <input type="number"
              onChange={handleChange}
+             placeholder='Enter width'
              value={data.values.width || ""}
              name="width"
              />
